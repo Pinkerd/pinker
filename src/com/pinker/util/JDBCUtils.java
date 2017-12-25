@@ -15,15 +15,8 @@ public class JDBCUtils {
     private static DataSource dataSource=null;
 
     static {
-        String c3p0Conf=null;
-        switch (LoadDatabase.getDatabaseType()){
-            case "SQLServer":
-                c3p0Conf="SQLServerC3p0Config";
-                break;
-            case "mysql":
-                c3p0Conf="mysqlC3p0Config";
-                break;
-        }
+        String c3p0Conf="mysql";
+
        dataSource=new  ComboPooledDataSource(c3p0Conf);
     }
 

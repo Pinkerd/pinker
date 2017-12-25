@@ -71,12 +71,12 @@ public T getBean(String sql, Object... args) {
 
     //通用的查询多个的方法
     public List<T> getListBean(String sql, Object... args) {
-        List<T> list = new ArrayList<T>();
+        List<T> list = new ArrayList<>();
         //连接数据库
         Connection con = JDBCUtils.getConnection();
         try {
             //调用工具类的查询多个的方法
-            list = run.query(con, sql, new BeanListHandler<T>(type), args);
+            list = run.query(con, sql, new BeanListHandler<>(type), args);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
