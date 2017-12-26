@@ -444,7 +444,7 @@ button:hover{
 .template-body-left{
 	background: white;
 	border-radius: 3px;
-	box-shadow: ;
+	box-shadow: 1px 1px 3px gray;
 	padding-bottom: 20px;
 }
 

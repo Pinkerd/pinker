@@ -16,7 +16,7 @@ svg {
 svg g {
   mix-blend-mode: lighten;
 }
-svg polygon {`
+svg polygon {
   stroke: none;
   fill: white;
 }
