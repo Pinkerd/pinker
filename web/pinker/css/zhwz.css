@@ -1,0 +1,187 @@
+.template-body-left{
+	margin-top: 30px;
+}
+
+.template-body-left a{
+
+}
+
+.title1{
+    font-weight: bold;
+    font-size:16px;
+    color: black;
+    margin-left:20px;
+}
+
+.status{
+	display: inline-block;
+	height: 23px;
+	padding: 0px 10px;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.cztp{
+    float:left;
+
+}
+
+.title{
+}
+
+.desciption{
+	width: 465px;
+	margin-left: 220px;
+	font-size: 14px;
+	line-height: 25px;
+	height: 100px;
+}
+
+.content{
+	
+	margin: 13px 0px;
+}
+
+.content1{
+    border-left-style:none ;
+    background:white;
+    box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.module{
+    margin-top: 30px;
+	box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+}
+
+.actions{
+	margin-top:10px ;
+	margin-left: 220px;
+	font-size: 14px;
+	color: rgb(150,150,150);
+	}
+	
+	.actions a{
+		color: rgb(150,150,150);
+	}
+	
+
+	
+.menu-nav-horizontal li{
+    list-style: none;
+    display: inline-block;
+    width: 230px;
+    text-align: center;
+    font-size: 14px;
+    padding:0;
+    border-right: 1px solid rgb(230,230,230);
+    height: 45px;
+    line-height: 45px;
+    color: red;
+}
+
+.visits-num{
+	display: inline-block;
+	margin-left: 90px;
+}
+
+.count{
+	
+}
+
+.title-attentionBtn{
+	margin-left: 20px;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	border-radius: 3px;
+	border: 0;
+	color: white;
+	background: lightseagreen;
+	outline: none;
+}
+
+.title-attentionBtn:hover{
+	outline: none;
+	cursor: pointer;
+}
+
+.menu-nav-horizontal .block3{
+    border-right:none;
+}
+
+
+.main-article{
+    float:left;
+    relative:160px;
+}
+
+.s-jpg{
+	position: relative;
+	top: 3px;
+}
+
+.button-link-share{
+	display: inline-block;
+}
+
+.main-article01{
+    margin-top: 20px;
+	box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+.main-article02{
+    margin-top: 120px;
+    border:1px solid cornsilk;
+    height:100px;
+    background: white;
+}
+
+.stylell{
+    margin-top: 30px;
+}
+
+.main-article01-top{
+    margin-top:5px;
+    color: rgb(100,100,150);
+}
+
+.main-article01-top a{
+	color: rgb(100,100,150);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.author-info{
+	margin-top: 10px;
+}
+.author-info a{
+	color: black;
+	font-weight: bold;
+}
+
+.author-info span{
+	color: rgb(100,100,100);
+	font-size: 14px;
+}
+
+.author-img{
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+
+.template-main-body{
+	margin-top: 50px;
+}

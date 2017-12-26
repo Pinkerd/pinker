@@ -1,0 +1,33 @@
+.left-attentionBlog{
+	margin-top: 3px;
+	background: white;
+	box-shadow: 1px 1px 3px gray;
+	border-radius: 3px;
+	height: 1000px;
+	padding: 20px 0px;
+}
+
+.blog-wrap{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 650px;
+	height: 60px;
+	border-bottom: 1px solid rgb(230,230,230);
+}
+
+.blog-title-wrap a{
+	color: rgb(50,50,50);
+}
+
+.blog-title-wrap a:hover{
+	color: rgb(50,50,180);
+}
+
+.blog-info{
+	margin-top: 5px;
+}
+
+.blog-info span{
+	color: rgb(200,200,200);
+	font-size: 14px;
+}
