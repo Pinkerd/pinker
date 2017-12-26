@@ -2,7 +2,6 @@ package com.pinker.service.Impl;
 
 import com.pinker.entity.pk_user;
 import com.pinker.service.UserService;
-import com.pinker.service.serviceimpl.UserServiceImpl;
 import org.junit.Test;
 
 import java.util.Date;
