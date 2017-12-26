@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,7 +9,7 @@
 		<script type="text/javascript" src="js/Template.js"></script>
 		<title></title>
 	</head>
-	</script>
+
 	<body>
 		<!--模板容器-->
 		<div class="template-body">
@@ -17,16 +18,16 @@
 				<div class="template-header-wrap">
 					<span class="template-logo">品客·</span>
 					<nav class="template-header-nav">
-						<a href="index.html" class="template-header-navItem isActive">首页</a>
-						<a href="topicList.html" class="template-header-navItem">发现</a>
-						<a href="topicList.html" class="template-header-navItem">话题</a>
+						<a href="index.jsp" class="template-header-navItem isActive">首页</a>
+						<a href="topicList.jsp" class="template-header-navItem">发现</a>
+						<a href="topicList.jsp" class="template-header-navItem">话题</a>
 					</nav>
 					<!--搜索框-->
-						
-					
+
+
 					<div class="template-search-bar">
-						<input type="text" name="" id="" value="" placeholder="你感兴趣的话题。。。"/>						
-						
+						<input type="text" name="" id="" value="" placeholder="你感兴趣的话题。。。"/>
+
 					</div>
 					<div class="template-search-buttonWrap">
 						<input type="button"  class="template-search-button"/>
@@ -34,10 +35,10 @@
 					<!--右侧登录注册以及头像-->
 					<div class="right template-header-right">
 					<div class="template-loginRegist">
-						<a href="login.html">登录</a>
-						<a href="login.html">注册</a>
+						<a href="login.jsp">登录</a>
+						<a href="login.jsp">注册</a>
 					</div>
-					
+
 					<div class="template-userInfo">
 						<div class="head-img">
 							<a href="PersonPage.htmls"><img src="img/default_head.png" height="40px" width="40px"/></a>
@@ -46,7 +47,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--模板结束-->
 			<div class="template-main-body">
 				<div class="template-body-left">
@@ -55,7 +56,7 @@
 						<div class="template-body-left-1-neirong" >
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-7d4709aaeec63583d56d8c20a46ef62b_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-7d4709aaeec63583d56d8c20a46ef62b_b.jpg);">
 										<span class="mask">
 											<span class="name">纪录片后的真实世界</span>
 										</span>
@@ -65,7 +66,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-1c0e457dff11aabd647f996e4f30ddad_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-1c0e457dff11aabd647f996e4f30ddad_b.png);">
 										<span class="mask">
 											<span class="name">增肌训练指南</span>
 										</span>
@@ -75,7 +76,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-1feb75da5ce168a72c8d48b84ccca58e_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-1feb75da5ce168a72c8d48b84ccca58e_b.jpg);">
 										<span class="mask">
 											<span class="name">看不到的恋人</span>
 										</span>
@@ -85,7 +86,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-226429246fd0c99a1bd373c409635f1d_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-226429246fd0c99a1bd373c409635f1d_b.jpg);">
 										<span class="mask">
 											<span class="name">消费升级启示录</span>
 										</span>
@@ -95,7 +96,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-2997e13bcb234e56f311365f13f1f56f_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-2997e13bcb234e56f311365f13f1f56f_b.png);">
 										<span class="mask">
 											<span class="name">建筑日用指南</span>
 										</span>
@@ -105,7 +106,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-37d58ac9870c766908e66c06d6bab782_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-37d58ac9870c766908e66c06d6bab782_b.png);">
 										<span class="mask">
 											<span class="name">残障:我和少数人的生活</span>
 										</span>
@@ -115,7 +116,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-4f01efeaef8e658236ae36700c5ec166_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-4f01efeaef8e658236ae36700c5ec166_b.jpg);">
 										<span class="mask">
 											<span class="name">欧洲足坛</span>
 										</span>
@@ -125,7 +126,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-531a01db3774573ebf07c0ee7ddd3d76_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-531a01db3774573ebf07c0ee7ddd3d76_b.png);">
 										<span class="mask">
 											<span class="name">2017诺贝尔奖巡礼</span>
 										</span>
@@ -135,7 +136,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-5351613e6a7e0456ff8855dd39cca340_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-5351613e6a7e0456ff8855dd39cca340_b.png);">
 										<span class="mask">
 											<span class="name">玩转城市周边</span>
 										</span>
@@ -145,7 +146,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-7d4709aaeec63583d56d8c20a46ef62b_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-7d4709aaeec63583d56d8c20a46ef62b_b.jpg);">
 										<span class="mask">
 											<span class="name">行为艺术</span>
 										</span>
@@ -155,7 +156,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-8786160588a72db7543eb565c21193e6_b.png);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-8786160588a72db7543eb565c21193e6_b.png);">
 										<span class="mask">
 											<span class="name">拯救室内空气</span>
 										</span>
@@ -165,7 +166,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-8bbbf198214e3a152d5c8476edb2c371_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-8bbbf198214e3a152d5c8476edb2c371_b.jpg);">
 										<span class="mask">
 											<span class="name">财务造假的背后</span>
 										</span>
@@ -175,7 +176,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-925a7fc9d3802991269ddb31d87fe8f6_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-925a7fc9d3802991269ddb31d87fe8f6_b.jpg);">
 										<span class="mask">
 											<span class="name">中国桥文化之旅</span>
 										</span>
@@ -185,7 +186,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-e121d3053e96b8547a871fd7303088c4_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-e121d3053e96b8547a871fd7303088c4_b.jpg);">
 										<span class="mask">
 											<span class="name">机器学习，学以致用</span>
 										</span>
@@ -195,7 +196,7 @@
 							</div>
 							<div class="template-body-left-body">
 								<div class="content">
-									<a href="topic_blogList.html" class="item-link" style="background-image: url(品客picture/v2-ee283e1bf3b8dab2609fe8b24990652b_b.jpg);">
+									<a href="topic_blogList.jsp" class="item-link" style="background-image: url(品客picture/v2-ee283e1bf3b8dab2609fe8b24990652b_b.jpg);">
 										<span class="mask">
 											<span class="name">懂一点婚姻</span>
 										</span>
@@ -210,8 +211,8 @@
 						</button>
 					</div>
 				</div>
-				
-				
+
+
 				<div class="template-body-right">
 					<!--在这里写右边-->
 					<div class="template-body-right-1">
@@ -337,12 +338,12 @@
 					</div>
 				</div>
 			</div>
-			
-			
+
+
 		</div>
-		
-		
-		
-		
+
+
+
+
 	</body>
 </html>

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,11 +36,11 @@
 
                     <!--中间菜单内容-->
                     <ul class="menuList left">
-                        <li><a href="index.html" class="active"> 首页</a></li>
-                        <li><a href="topic_blogList.html"> 发现</a></li>
-                        <li><a href="topicList.html">话题</a></li>
-                        <li><a href="topic_blogList.html">专栏</a></li>
-                        <li><a href="topicList.html">圆桌</a></li>
+                        <li><a href="index.jsp" class="active"> 首页</a></li>
+                        <li><a href="topic_blogList.jsp"> 发现</a></li>
+                        <li><a href="topicList.jsp">话题</a></li>
+                        <li><a href="topic_blogList.jsp">专栏</a></li>
+                        <li><a href="topicList.jsp">圆桌</a></li>
                     </ul>
 
                     <!--右边内容-->
@@ -52,8 +53,8 @@
 
                 <!--网站名字 登陆注册-->
                 <div class="logoName adjustName"><span>品客</span></div>
-                <div class="logoName" id="logIn"><a href="login.html">登录</a></div>
-                <div class="logoName" id="regist"><a href="login.html">注册</a></div>
+                <div class="logoName" id="logIn"><a href="login.jsp">登录</a></div>
+                <div class="logoName" id="regist"><a href="login.jsp">注册</a></div>
 
             </div>
             <!--Section-->
@@ -63,11 +64,11 @@
                 <div id="bannerBox"><!-- 最外层部分 -->
                     <div id="banner"><!-- 轮播部分 -->
                         <ul class="imgList"><!-- 图片部分 -->
-                            <li><a href="topic_blogList.html"><img src="images/homepageImages/1.jpg" alt="puss in boots1"></a></li>
-                            <li><a href="topic_blogList.html"><img src="images/homepageImages/2.jpg" alt="puss in boots2"></a></li>
-                            <li><a href="topic_blogList.html"><img src="images/homepageImages/3.jpg" alt="puss in boots3"></a></li>
-                            <li><a href="topic_blogList.html"><img src="images/homepageImages/4.jpg" alt="puss in boots4"></a></li>
-                            <li><a href="topic_blogList.html"><img src="images/homepageImages/5.jpg" alt="puss in boots5"></a></li>
+                            <li><a href="topic_blogList.jsp"><img src="images/homepageImages/1.jpg" alt="puss in boots1"></a></li>
+                            <li><a href="topic_blogList.jsp"><img src="images/homepageImages/2.jpg" alt="puss in boots2"></a></li>
+                            <li><a href="topic_blogList.jsp"><img src="images/homepageImages/3.jpg" alt="puss in boots3"></a></li>
+                            <li><a href="topic_blogList.jsp"><img src="images/homepageImages/4.jpg" alt="puss in boots4"></a></li>
+                            <li><a href="topic_blogList.jsp"><img src="images/homepageImages/5.jpg" alt="puss in boots5"></a></li>
                         </ul>
                         <!--前后按钮-->
                         <img src="images/homepageImages/arrowLeft.png" width="33px" height="68px" id="prev">
@@ -75,7 +76,7 @@
 
                         <ul class="infoList"><!-- 图片中间文字信息部分 -->
                             <li class="infoOn">
-                               <a href="topic_blogList.html">
+                               <a href="topic_blogList.jsp">
                                    <div class="bannerTitile">标题1</div>
                                    <div class="bannerSection">文字描述文字描述文字描述文字描述文字描述<br>
                                        文字描述文字描述文字描述文字描述文字描述<br>文字描述文字描述文字描述文字描述文字描述<br>
@@ -85,7 +86,7 @@
                                </a>
                             </li>
                             <li>
-                                <a href="topic_blogList.html">
+                                <a href="topic_blogList.jsp">
                                     <div class="bannerTitile">标题2</div>
                                     <div class="bannerSection">文字描述文字描述文字描述文字描述文字描述<br>
                                         文字描述文字描述文字描述文字描述文字描述<br>文字描述文字描述文字描述文字描述文字描述<br>
@@ -95,7 +96,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="topic_blogList.html">
+                                <a href="topic_blogList.jsp">
                                     <div class="bannerTitile">标题3</div>
                                     <div class="bannerSection">文字描述文字描述文字描述文字描述文字描述<br>
                                         文字描述文字描述文字描述文字描述文字描述<br>文字描述文字描述文字描述文字描述文字描述<br>
@@ -105,7 +106,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="topic_blogList.html">
+                                <a href="topic_blogList.jsp">
                                     <div class="bannerTitile">标题4</div>
                                     <div class="bannerSection">文字描述文字描述文字描述文字描述文字描述<br>
                                         文字描述文字描述文字描述文字描述文字描述<br>文字描述文字描述文字描述文字描述文字描述<br>
@@ -115,7 +116,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="topic_blogList.html">
+                                <a href="topic_blogList.jsp">
                                     <div class="bannerTitile">标题5</div>
                                     <div class="bannerSection">文字描述文字描述文字描述文字描述文字描述<br>
                                         文字描述文字描述文字描述文字描述文字描述<br>文字描述文字描述文字描述文字描述文字描述<br>
@@ -215,7 +216,7 @@
             </div>
         </div>
 
-        <!--最热话题-->
+        <!--最热话题-->dfdfdcsdcsdcgv56t
         <div class="hot">
             <div class="hotTitle">
                 <h1>近 期 最 热 话 题</h1>
