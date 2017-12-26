@@ -1,0 +1,84 @@
+.footLeft{
+    width: 300px;
+    height: 100px;
+   /* border: 1px solid red;*/
+    margin-left: 233px;
+    color: white;
+    text-align: center;
+}
+.footMiddle{
+    width: 300px;
+    height: 100px;
+   /* border: 1px solid red;*/
+    color: white;
+    text-align: center;
+}
+.footRight{
+     width: 300px;
+     height: 100px;
+     /*border: 1px solid red;*/
+     color: white;
+     text-align: center;
+ }
+.footRight a{
+    text-decoration: none;
+    color: white;
+}
+.footBottom{
+    width: 1000px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+   /* border: 1px solid red;*/
+
+    margin-left: 183px;
+    color: white;
+}
+.code{
+    width: 1300px;
+    height: 150px;
+   /* border: solid 1px red;*/
+}
+
+#code1{
+    position: absolute;
+    left: 550px;
+    display: none;
+}
+#code2{
+    position: absolute;
+    left: 620px;
+    display: none;
+}
+#code3{
+    position: absolute;
+    left: 690px;
+    display: none;
+}
+.code ul{
+    width: 800px;
+    height: 50px;
+   /* border: solid 1px white;*/
+    position: absolute;
+    left: 280px;
+    margin-top: 50px;
+}
+.code ul li{
+    list-style-type: none;
+    width: 155px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-right:1px dashed white ;
+}
+.code ul li a{
+    text-decoration: none;
+    color: white;
+}
+.code ul li a:hover{
+    color: rgb(67,98,202);
+}
+.footRight a:hover{
+    color: rgb(67,98,202);
+}

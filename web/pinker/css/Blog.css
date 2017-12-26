@@ -1,0 +1,455 @@
+﻿
+/*顶部论题*/
+.page_top{
+	margin-top: 50px;
+	height: 208.35px;
+	/*width: 1498.89px;*/
+	    background: white;
+	/*border: 1px solid black;*/
+}
+.page_topHeader{
+	padding: 16px;
+	height: 208.35px;
+	margin: 0 auto;
+	/*width: 1498.89px;*/
+	/*border: 1px solid black;*/
+}
+.page_topcontent{
+	height: 135.052px;
+	/*width: 1031.98px;*/
+	padding: 16px;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+.page-border{
+	width: 1032px;
+	height: 135px;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+
+.page_topcontentmain{
+	/*width: 694px;*/
+	height: 135px;
+	display: inline-block;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+.page_topcontenttags{
+	/*width: 667.049px;*/
+	height: 37.951px;
+	/*border: 1px solid black;*/
+}
+/*相关的论题*/
+.page_topcontenttags .page_topcontentTopics{
+	margin: 3px 5px 3px 0;
+	height: 30px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 30px;
+	background: #eef4fa;
+    border-radius: 100px;
+    display: inline-block;
+    
+}
+/*论题的主体*/
+.page_topcontenttitle{
+	margin-top: 12px;
+	margin-bottom: 4px;
+	font-size: 22px;
+}
+.page_topcontentdetail{
+	width: 667.049px;
+	height: 50px;
+	/*border: 1px solid black;*/
+	font-size: 15px;
+}
+.page_topcontentside{
+	/*width: 296px;*/
+	height: 135px;
+	display: inline-block;
+	padding-right: 20px;
+	float: right;
+	/*border: 1px solid black;*/
+}
+/*收藏者*/
+.page-collector{
+	/*width: 100px;*/
+	height: 38px;
+	/*border: 1px solid black;*/
+	display: inline-block;
+}
+.collector-name{
+	/*width: 100px;*/
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	 text-align: center;
+	 cursor: pointer;
+	 color: #8590a6;
+	/*border: 1px solid black;*/
+}
+.collector-value{
+	/*width: 100px;*/
+	height: 18px;
+	font-size: 14px;
+	line-height: 14px;
+	 text-align: center;
+	 cursor: pointer;
+	 color: #8590a6;
+}
+/*被浏览*/
+.item{
+	/*width: 100px;*/
+	height: 38px;
+	/*border: 1px solid black;*/
+	display: inline-block;
+}
+.item-name{
+	/*width: 100px;*/
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	 text-align: center;
+	 cursor: pointer;
+	 color: #8590a6;
+	/*border: 1px solid black;*/
+}
+.item-value{
+/*	width: 100px;*/
+	height: 18px;
+	font-size: 14px;
+	line-height: 14px;
+	 text-align: center;
+	 cursor: pointer;
+	 color: #8590a6;
+}
+/*讨论论题的底部*/
+.page_topfoot{
+	height: 49.3229px;
+	padding-bottom: 12px;
+}
+.page_topfootmain{
+	height: 34px;
+	
+
+}
+.page_topfootGroup{
+	
+	/*width:227px ;*/
+	height: 34px;
+	/*margin: 0 -8px;*/
+	font-size: 15px;
+	color: #262626;
+    background: white;
+	display: inline-block;
+	/*border: 1px solid black;*/
+	
+}
+/*关注 问题*/
+.page-attention{
+	height: 34px;
+	margin: 0 8px;
+	color: white;
+	border: white;
+	text-align: center;
+	background: #0f88eb;
+	cursor: pointer;
+	width: 90px;
+	border-radius: 3px;
+}
+/*我要评论*/
+.page-review{
+	
+	display: inline-block;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #0f88eb;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #ccd8e1;
+    border-radius: 3px;
+	
+}
+.page_topfootAction{
+	/*width:353px ;*/
+	height: 21px;
+	margin-left: 30px;
+	font-size: 15px;
+	display: inline-block;
+/*	border: 1px solid black;*/
+}
+.page_topfootActioncomment{
+	
+	/*width:78px ;*/
+	height: 23px;
+	display: inline-block;
+	/*border: 1px solid black;*/
+	
+}
+/*评论*/
+.button3{
+	border: 0;
+	background-color: white;
+}
+/*转发*/
+.button4{
+	border: 0;
+	background-color: white;
+}
+.button3-img{
+	display: inline-block;
+	position: relative;
+	top: 4px;
+}
+.page_topfootActionshareMenu{
+	margin-left: 20px;
+	display: inline-block;
+}
+
+
+.template-body-left p{
+	text-indent: 2em;
+}
+
+
+	/*左边的相关话题*/
+.data-reactid{
+	width: 654px;
+    /*height: 4842px;*/
+    margin-left: 23px;
+    border: 0;
+}
+
+
+.contentITem-meta {
+	width: 654px;
+	height: 74px;
+	/*border: 1px solid blackx: ;;*/
+	
+}
+
+.author-info {
+	width: 654px;
+	height: 42px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.Popover {
+	display: inline-block;
+}
+
+.AuthorInfo-content {
+	width: 602px;
+	height: 41px;
+	font-size: 15px;
+	display: inline-block;
+	/*border: 1px solid black;*/
+}
+	.AuthorInfo-head {
+		width: 602px;
+		height: 19px;
+		/*border: 1px solid black;*/
+	}
+	.AuthorInfo-detail {
+		width: 602px;
+		height: 23px;
+		/*border: 1px solid black;*/
+	}
+	.AnswerItem-extraInfo {
+		width: 654px;
+		height: 21px;
+		margin-top: 10px;
+		/*border: 1px solid black;*/
+	}
+	.RichContent-inner {
+		
+		margin-top: 20px;
+		margin-bottom: -4px;
+		overflow: hidden;
+		line-height: 1.6;
+	}
+	
+.ContentItem-time{
+	width: 654px;
+	height: 24px;
+	margin-top: 20px;
+    font-size: 14px;
+    color: #8590a6;
+    /*border: 1px solid black;*/
+}
+.ContentItem-actions{
+	width: 654px;
+	height: 52px;
+	/*border: 1px solid black;*/
+}
+
+.left-Thumb{
+	align-items: center;
+	width: 50px;
+    height: 34px;
+    padding: 0 20px;
+   margin: 5px 5px;
+    color: #555;
+    background: #fff;
+    clear: both;
+    border: 0px;
+}
+.left-noThumb{
+	width: 33px;
+    height: 31px;
+	color: #555;
+	margin: 5px 0px;
+	border: 0px;
+    background: #fff;
+}
+.left-comment{
+	margin: 5px 24px;
+	border: 0px;
+	background-color: white;
+}
+.left-dividual{
+	border: 0px;
+	background-color: white;
+}
+.left-collect{
+	border: 0px;
+	margin: 5px 24px;
+	background-color: white;
+}
+
+.Comments-container{
+	
+	border: 1px solid darkgray;
+}
+.Comments-top{
+	height: 50px;
+	margin: 5px 5px;
+	padding: 10px;
+	font-size: 15px;
+    color: #262626
+}
+.CommentItem{
+	height: 110px;
+	
+}
+.CommentItem-meta{
+    position: relative;
+    height: 27px;
+    padding-right: 3px;
+    padding-left: 1px;
+    margin-bottom: 5px;
+    line-height: 24px;
+        font-size: 15px;
+}
+.Popover{
+	margin-left: 5px;
+	display: inline-block;
+}
+.CommentItem-content{
+	margin-top: 8px;
+}
+.CommentItem-Thumb{
+	border: 0px;
+	background-color: white;
+	margin:8px 8px;
+}
+.CommentItem-revert{
+	border: 0px;
+	background-color: white;
+}
+
+.Comments-foot{
+	height: 50px;
+	border-top: 1px solid darkgray;
+	
+}
+
+
+
+button:focus{
+	outline: none;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+
+.foot-comment input{
+	margin: 5px 5px ;
+	display: inline-block;
+	width: 550px;
+	height: 40px;
+	padding: 10px;
+}
+
+#foot-comment{
+	border: 0px;
+	text-align: center;
+	color: white;
+	background: #0f88eb;
+	cursor: pointer;
+	width: 60px;
+	height: 34px;
+	
+	}
+	
+
+/*右边的相关话题*/
+.Card{
+	width: 296px;
+	height: 302px;
+}
+.Cardhead{
+	width: 296px;
+	height: 50px;
+	
+   
+}
+.CardheadText{
+	width: 63px;
+	height: 22px;
+	font-size: 15px;
+	font-weight: 600;
+    color: #262626;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.Cardsection{
+	margin-top: -20px;
+	width: 296px;
+	height: 252px;
+}
+.Cardsectionitem{
+	text-indent: 2em;
+	width: 256px;
+	height: 20px;
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 21px;
+	
+}
+.Cardsectionitem a{
+	color: #175199;
+	font-size: 14px;
+}
+
+/**
+ * 左侧大边框
+ */
+.template-body-left{
+	background: white;
+	border-radius: 3px;
+	box-shadow: ;
+	padding-bottom: 20px;
+}
+
+.template-body-right{
+	box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+}

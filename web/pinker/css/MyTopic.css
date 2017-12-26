@@ -1,0 +1,88 @@
+.left-attentionTopic{
+	background: white;
+	box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+	margin-top: 2px;
+	height: 1000px;
+}
+
+.topic-title{
+	width: 200px;
+	position: relative;
+}
+
+.topic-title a{
+	color: rgb(50,50,50);
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+.topic-title:hover .detail-wrap{
+	display: block;
+}
+
+.topic-wrap{
+	padding: 20px 0px;
+	border-bottom: 1px solid rgb(230,230,230);
+	height: 100px;	
+	width: 650px;
+	margin: 0 auto;
+}
+
+.topic-img{
+	width: 60px;
+	float: left;
+	
+}
+
+.topic-introduce{
+color: rgb(100,100,100);
+margin-left: 70px;
+margin-top: 10px;
+}
+
+.detail-wrap{
+	position: absolute;
+	left: 10px;
+	box-shadow: 1px 1px 3px gray;
+	background: white;
+	border-radius: 3px;
+	width: 300px;
+	height: 200px;
+	z-index: 100;
+}
+
+.detail-img{
+	height: 66px;
+	border-bottom: 1px solid rgb(230,230,230);
+}
+
+.detail-introduce{
+	height: 90px;
+	border-bottom: 1px solid rgb(230,230,230);
+}
+
+.detail-img img{
+	margin: 0 auto;
+	display: inline-block;
+	width: 60px;
+	margin-left: 120px;
+}
+
+.detail-introduce span{
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.detail-buttonwrap .attentionBtn{
+	display: block;
+	width: 100px;
+	height: 30px;
+	border: 0;
+	color: white;
+	background: cornflowerblue;
+	margin: 8px auto 0px;
+}
