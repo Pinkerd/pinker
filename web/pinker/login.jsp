@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -57,7 +58,7 @@
 				
 				<div class="form-body">
 					<div class="index-form-login  isActive" hidden="hidden">
-					<form action="PersonPage.html" method="get">
+					<form action="PersonPage.jsp" method="get">
 						<div class="login-input-usernameWrap">
 						<input type="text" name="username" id="username" value="" placeholder="用户名"/>
 						</div>
@@ -72,7 +73,7 @@
 					</div>
 					
 					<div class="index-form-regiser" hidden="hidden">
-						<form action="PersonPage.html" method="get">
+						<form action="PersonPage.jsp" method="get">
 							<input type="text" name="username" id="username" placeholder="用户名" value="" />
 							<input type="text" name="password" id="password" placeholder="密码" value="" />
 							<input type="text" name="passwordAg" id="passwordAg" placeholder="确认密码" value="" />
@@ -87,6 +88,6 @@
 			</div>
 			
 		</div>
-		<iframe src="backgroud.html" width="100%" height="100%"></iframe>
+		<iframe src="backgroud.jsp" width="100%" height="100%"></iframe>
 	</body>
 </html>

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 
@@ -20,9 +21,9 @@
 				<div class="template-header-wrap">
 					<span class="template-logo">品客·</span>
 					<nav class="template-header-nav">
-						<a href="index.html" class="template-header-navItem isActive">首页</a>
-						<a href="topicList.html" class="template-header-navItem">发现</a>
-						<a href="topicList.html" class="template-header-navItem">话题</a>
+						<a href="index.jsp" class="template-header-navItem isActive">首页</a>
+						<a href="topicList.jsp" class="template-header-navItem">发现</a>
+						<a href="topicList.jsp" class="template-header-navItem">话题</a>
 					</nav>
 					<!--搜索框-->
 
@@ -36,8 +37,8 @@
 					<!--右侧登录注册以及头像-->
 					<div class="right template-header-right">
 						<div class="template-loginRegist">
-							<a href="login.html">登录</a>
-							<a href="login.html">注册</a>
+							<a href="login.jsp">登录</a>
+							<a href="login.jsp">注册</a>
 						</div>
 
 						<div class="template-userInfo">
@@ -91,7 +92,7 @@
 					<div class="left-attentionBlog">
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
-								<a href="blog.html"><h3>学java除了工作，怎样玩更爽？</h3></a>
+								<a href="blog.jsp"><h3>学java除了工作，怎样玩更爽？</h3></a>
 							</div>
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
@@ -100,17 +101,7 @@
 						
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
-								<a href="blog.html"><h3>编程到底难在哪里？</h3></a>
-							</div>
-							<div class="blog-info">
-								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
-							</div>
-						</div>	
-						
-						
-						<div class="blog-wrap">
-							<div class="blog-title-wrap">
-								<a href="blog.html"><h3>说说你身边的收纳大师？</h3></a>
+								<a href="blog.jsp"><h3>编程到底难在哪里？</h3></a>
 							</div>
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
@@ -120,7 +111,17 @@
 						
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
-								<a href="blog.html"><h3>疑因内部宫斗被离职，中兴 70 后程序员从公司坠楼 ​​​​</h3></a>
+								<a href="blog.jsp"><h3>说说你身边的收纳大师？</h3></a>
+							</div>
+							<div class="blog-info">
+								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
+							</div>
+						</div>	
+						
+						
+						<div class="blog-wrap">
+							<div class="blog-title-wrap">
+								<a href="blog.jsp"><h3>疑因内部宫斗被离职，中兴 70 后程序员从公司坠楼 ​​​​</h3></a>
 							</div>
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
@@ -129,7 +130,7 @@
 						
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
-								<a href="blog.html"><h3>如何看待美国谷歌女工程师马楚楚在旧金山湾身亡？</h3></a>
+								<a href="blog.jsp"><h3>如何看待美国谷歌女工程师马楚楚在旧金山湾身亡？</h3></a>
 							</div>
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
@@ -205,7 +206,7 @@
 								<img src="img/headimg/111.jpg" height="50px" width="50px" />
 							</div>
 							<div class="right-friendInfo">
-								<a href="PersonPage.html">
+								<a href="PersonPage.jsp">
 									<h4>时间高手</h4></a>
 								<span class="introduce">人最软弱的地方，是舍不得。</span>
 							</div>
@@ -219,7 +220,7 @@
 								<img src="img/headimg/ti111mg.jpg" height="50px" width="50px" />
 							</div>
 							<div class="right-friendInfo">
-								<a href="PersonPage.html">
+								<a href="PersonPage.jsp">
 									<h4>David Lee</h4></a>
 								<span class="introduce">我爱你你却爱她，先森 </span>
 							</div>
@@ -233,7 +234,7 @@
 								<img src="img/headimg/ti1mg.jpg" height="50px" width="50px" />
 							</div>
 							<div class="right-friendInfo">
-								<a href="PersonPage.html">
+								<a href="PersonPage.jsp">
 									<h4>我的小贱贱</h4></a>
 								<span class="introduce">我知道你爱她命里少我一个也没差</span>
 							</div>
@@ -247,7 +248,7 @@
 								<img src="img/headimg/ti66mg.jpg" height="50px" width="50px" />
 							</div>
 							<div class="right-friendInfo">
-								<a href="PersonPage.html">
+								<a href="PersonPage.jsp">
 									<h4>建民质疑</h4></a>
 								<span class="introduce">良人未归途我念故人归</span>
 							</div>
@@ -261,7 +262,7 @@
 								<img src="img/headimg/tim11g.jpg" height="50px" width="50px" />
 							</div>
 							<div class="right-friendInfo">
-								<a href="PersonPage.html">
+								<a href="PersonPage.jsp">
 									<h4>Party Time</h4></a>
 								<span class="introduce">不要暗示我，我知道暗室欺人</span>
 							</div>
