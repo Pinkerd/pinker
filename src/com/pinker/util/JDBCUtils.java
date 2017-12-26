@@ -1,72 +1,48 @@
 package com.pinker.util;
 
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
+/**
+ * 工具类：连接数据库、关闭连接
+ */
 public class JDBCUtils {
-    /**
-     * 静态连接池
-     */
-    private static DataSource dataSource=null;
-
-    static {
-        String c3p0Conf="mysql";
-
-       dataSource=new  ComboPooledDataSource(c3p0Conf);
-    }
-
-
-    /**
-     * 获取数据库链接
-     * @return
-     */
-    public static Connection getConnection(){
-        Connection conn=null;
+    //连接数据库
+    public static Connection getConnection() {
+        Connection con = null;
+        DataSource source = new ComboPooledDataSource("c3p0Config");
         try {
-             conn=dataSource.getConnection();
-        } catch (SQLException e) {
+            con = source.getConnection();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return conn;
+        return con;
     }
-
-
-    /**
-     * 关闭连接方法
-     */
-public static void close(ResultSet rs,PreparedStatement ps,Connection conn){
-
-    if (rs != null) {
-        try {
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+    //关闭连接
+    public static void close(ResultSet rs, PreparedStatement ps, Connection con) {
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-    }
-
-    if (ps != null) {
-        try {
-            ps.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (ps != null) {
+            try {
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
-    }
-
-    if (conn != null) {
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
-
-
-}
-
-
