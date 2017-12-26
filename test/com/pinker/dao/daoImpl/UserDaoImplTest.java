@@ -1,5 +1,6 @@
 package com.pinker.dao.daoImpl;
 import com.pinker.dao.UserDao;
+import com.pinker.dao.impl.UserDaoImpl;
 import com.pinker.entity.pk_user;
 import org.junit.Test;
 
@@ -70,9 +71,10 @@ public class UserDaoImplTest {
 
     @Test
     public void addUser() throws Exception {
-        pk_user pk_user = new pk_user(null,"user1","111111","user1","user1@qq.com",1L,1L,new Date(),new Date(),"address1","school1","male",new Date(),"aries","cintroduction1","header1");
-        pk_user pk_user2 = new pk_user(null,"user2","222222","user2","user2@qq.com",2L,2L,new Date(),new Date(),"address2","school2","male",new Date(),"aries","cintroduction2","header2");
-        boolean b = ud.addUser(pk_user2);
+      /*  pk_user pk_user = new pk_user(null,"user1","111111","user1","user1@qq.com",1L,1L,new Date(),new Date(),"address1","school1","male",new Date(),"aries","cintroduction1","header1");
+        pk_user pk_user2 = new pk_user(null,"user2","222222","user2","user2@qq.com",2L,2L,new Date(),new Date(),"address2","school2","male",new Date(),"aries","cintroduction2","header2");*/
+
+        boolean b = ud.addUser("asd1","111111",new Date());
         System.out.println(b);
     }
 

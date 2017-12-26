@@ -1,9 +1,10 @@
-package com.pinker.service.serviceImpl;
+package com.pinker.service.Impl;
 
-import com.pinker.dao.daoImpl.UserDaoImpl;
+import com.pinker.dao.impl.UserDaoImpl;
 import com.pinker.entity.pk_user;
 import com.pinker.service.UserService;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,8 +16,8 @@ public class UserServiceImpl implements UserService {
     UserDaoImpl userDao=new UserDaoImpl();
 
     @Override//注册 添加新用户  test  pass
-    public boolean add(pk_user pkuser) {
-        boolean b = userDao.addUser(pkuser);
+    public boolean add(String loginName, String  password, Date createtime) {
+        boolean b = userDao.addUser(loginName,password,createtime);
         return b;
     }
 

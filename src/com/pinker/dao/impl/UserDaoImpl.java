@@ -1,9 +1,10 @@
-package com.pinker.dao.daoImpl;
+package com.pinker.dao.impl;
 
 import com.pinker.dao.BaseDao;
 import com.pinker.dao.UserDao;
 import com.pinker.entity.pk_user;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,15 +14,10 @@ import java.util.List;
 public class UserDaoImpl extends BaseDao<pk_user> implements UserDao {
 
     @Override//注册 添加新用户 test pass
-    public boolean addUser(pk_user pkuser) {
-        String sql="insert into pk_user(loginName,password,username,email,roleId,status," +
-                    "createtime,lastlogin,residence,school,gender,birthday,constellation," +
-                "introduction,header) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    public boolean addUser(String loginName, String  password, Date createtime) {
+        String sql="insert into pk_user(loginName,password,username,createtime) values(?,?,?,?)";
         int update =
-                this.update(sql, pkuser.getLoginName(), pkuser.getPassword(), pkuser.getUsername(), pkuser.getEmail(),
-                pkuser.getRoleId(), pkuser.getStatus(), pkuser.getCreatetime(), pkuser.getLastlogin(),
-                pkuser.getResidence(), pkuser.getSchool(), pkuser.getGender(), pkuser.getBirthday(),
-                pkuser.getConstellation(), pkuser.getIntroduction(), pkuser.getHeader());
+                this.update(sql,loginName,password,loginName,createtime );
         return update!=0;
     }
 
