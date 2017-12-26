@@ -5,9 +5,11 @@ import com.pinker.entity.Friend;
 import java.util.List;
 
 public interface FriendDao {
-    Friend selectOneFri(Friend friend);
+    Friend selectOneFriByFriendId(Friend friend);
 
     List<Friend> selectAllFri();
 
     int insertFri(Friend friend);
+
+    Friend selectOneByUserId(Friend friend);
 }

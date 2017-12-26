@@ -25,7 +25,7 @@ public class Permission {
         this.id = id;
     }
 
-    public boolean isIsadmin() {
+    public boolean getIsadmin() {
         return isadmin;
     }
 
@@ -33,7 +33,7 @@ public class Permission {
         this.isadmin = isadmin;
     }
 
-    public boolean isIsvip() {
+    public boolean getIsvip() {
         return isvip;
     }
 

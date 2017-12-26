@@ -1,4 +1,4 @@
-package com.pinker.dao.daoImpl;
+package com.pinker.dao.impl;
 
 import com.pinker.dao.BaseDao;
 import com.pinker.dao.UserDao;

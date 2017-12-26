@@ -8,17 +8,20 @@ import java.util.List;
 
 public class RoleDaoImpl extends BaseDao<Role> implements RoleDao {
     @Override
-    public Role selectOne(Role role) {
-        return null;
+    public Role selectOneRol(Role role) {
+        String sql="select * from role where id=?";
+        return this.getBean(sql,role.getId());
     }
 
     @Override
-    public List<Role> selectAll() {
-        return null;
+    public List<Role> selectAllRol() {
+        String sql="select * from role";
+        return this.getListBean(sql);
     }
 
     @Override
-    public int insert(Role role) {
-        return 0;
+    public int insertRol(Role role) {
+        String sql="insert into role (rolename,permissionId)values(?,?)";
+        return this.update(sql,role.getRolename(),role.getPermissionId());
     }
 }
