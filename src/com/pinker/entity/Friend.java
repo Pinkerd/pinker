@@ -4,6 +4,24 @@ public class Friend {
     private Integer userId;
     private Integer friendId;
     private String remark;
+    private pk_user user;
+    private pk_user friend;
+
+    public pk_user getUser() {
+        return user;
+    }
+
+    public void setUser(pk_user user) {
+        this.user = user;
+    }
+
+    public pk_user getFriend() {
+        return friend;
+    }
+
+    public void setFriend(pk_user friend) {
+        this.friend = friend;
+    }
 
     @Override
     public String toString() {

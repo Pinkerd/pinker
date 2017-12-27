@@ -3,29 +3,22 @@
 .page_top{
 	margin-top: 50px;
 	height: 208.35px;
-	/*width: 1498.89px;*/
 	    background: white;
-	/*border: 1px solid black;*/
 }
 .page_topHeader{
 	padding: 16px;
 	height: 208.35px;
 	margin: 0 auto;
-	/*width: 1498.89px;*/
-	/*border: 1px solid black;*/
 }
 .page_topcontent{
 	height: 135.052px;
-	/*width: 1031.98px;*/
 	padding: 16px;
 	margin: 0 auto;
-	/*border: 1px solid black;*/
 }
 .page-border{
 	width: 1032px;
 	height: 135px;
 	margin: 0 auto;
-	/*border: 1px solid black;*/
 }
 
 .page_topcontentmain{
@@ -406,8 +399,8 @@ button:hover{
 }
 .Cardhead{
 	width: 296px;
-	height: 50px;
-	
+	height: 30px;
+	margin-left: 13px;
    
 }
 .CardheadText{
@@ -420,18 +413,15 @@ button:hover{
     margin-left: 10px;
 }
 .Cardsection{
-	margin-top: -20px;
-	width: 296px;
+	width: 250px;
 	height: 252px;
+	margin:0 auto;
 }
 .Cardsectionitem{
-	text-indent: 2em;
 	width: 256px;
-	height: 20px;
-	margin-top: 20px;
 	font-size: 14px;
 	line-height: 21px;
-	
+	margin-top: 10px;
 }
 .Cardsectionitem a{
 	color: #175199;

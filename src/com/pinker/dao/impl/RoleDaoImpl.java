@@ -1,16 +1,20 @@
 package com.pinker.dao.impl;
 
 import com.pinker.dao.BaseDao;
+import com.pinker.dao.PermissionDao;
 import com.pinker.dao.RoleDao;
+import com.pinker.entity.Permission;
 import com.pinker.entity.Role;
 
 import java.util.List;
 
 public class RoleDaoImpl extends BaseDao<Role> implements RoleDao {
+    private PermissionDao permissionDao=new PermissionDaoImpl();
     @Override
     public Role selectOneRol(Role role) {
         String sql="select * from role where id=?";
-        return this.getBean(sql,role.getId());
+
+        return this.getBean(sql, role.getId());
     }
 
     @Override

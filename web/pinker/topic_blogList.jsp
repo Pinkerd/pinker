@@ -82,22 +82,6 @@
 						</ul>
 					</div>
 
-					<div class="main-article">
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">国内目前对成年残障人士的福利保障如何？如何才能避免「八旬老母含泪杀害智障儿子获缓刑」这类案件发生？</a>
-							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
 
 						<div class="main-article01">
 							<div class="main-article01-top" >
@@ -119,74 +103,13 @@
 								</a>
 								<a href="#">
 									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
+									<span class="txt-img05">评论</span>
 								</a>
 							</div>
 						</div>
 
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">慢性病病人及家属，在确诊初期的心理建设，需要注意哪些方面，如何进行？</a>
-							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
 
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">国内的无障碍设施究竟如何？</a>
-							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
 
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">因为残疾只能呆在家里，觉得自己活着没意义，怎么办？</a>
-							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">残疾人面对自己的残疾会有怎样的心态生活？</a>
-							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
 
 					</div>
 				</div>
