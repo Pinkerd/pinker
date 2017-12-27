@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Aries.Gu on 2017/12/26.
@@ -62,7 +63,12 @@ public class UsersServlet extends BaseServlet {
     }
     /*显示列表 查询所有用户*/
     protected void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("jump into findAll...");
 
+        List<pk_user> all = usi.all();  //取出所有的对象
+        System.out.println(all);
+        request.setAttribute("list",all);
+        request.getRequestDispatcher("pinker/testUser.jsp").forward(request,response);//转发到页面
     }
     /*根据id删除用户*/
     protected void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
