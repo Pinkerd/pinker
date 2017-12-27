@@ -5,9 +5,9 @@ import com.pinker.entity.Role;
 import java.util.List;
 
 public interface RoleDao {
-    Role selectOne(Role role);
+    Role selectOneRol(Role role);
 
-    List<Role> selectAll();
+    List<Role> selectAllRol();
 
-    int insert(Role role);
+    int insertRol(Role role);
 }

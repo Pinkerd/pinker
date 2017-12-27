@@ -3,14 +3,14 @@ package com.pinker.entity;
 public class Role {
     private Integer id;
     private String rolename;
-    private Integer permissionId;
+    private Permission permission;
 
     @Override
     public String toString() {
         return "Role{" +
                 "id=" + id +
                 ", rolename='" + rolename + '\'' +
-                ", permissionId=" + permissionId +
+                ", permission=" + permission +
                 '}';
     }
 
@@ -20,6 +20,7 @@ public class Role {
 
     public void setId(Integer id) {
         this.id = id;
+        this.permission.setRoleId(id);
     }
 
     public String getRolename() {
@@ -30,18 +31,22 @@ public class Role {
         this.rolename = rolename;
     }
 
-    public Integer getPermissionId() {
-        return permissionId;
+    public Permission getPermission() {
+        return permission;
     }
 
-    public void setPermissionId(Integer permissionId) {
-        this.permissionId = permissionId;
+    public void setPermission(Permission permission) {
+        this.permission = permission;
     }
 
-    public Role(Integer id, String rolename, Integer permissionId) {
+    public Role() {
+
+    }
+
+    public Role(Integer id, String rolename) {
 
         this.id = id;
         this.rolename = rolename;
-        this.permissionId = permissionId;
+        this.permission.setRoleId(id);
     }
 }
