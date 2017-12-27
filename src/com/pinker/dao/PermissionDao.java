@@ -11,6 +11,6 @@ public interface PermissionDao {
 
    Permission selectOnePerm(Permission permission);
 
-   List<Permission> selectAllPerm();
+   List<Permission> selectAll();
 
 }

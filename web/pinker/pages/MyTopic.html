@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/Template.css" />
 		<link rel="stylesheet" type="text/css" href="css/PersonPage.css" />
+		<link rel="stylesheet" type="text/css" href="css/MyTopic.css" />
 		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/Template.js"></script>
 		<script type="text/javascript" src="js/personpage.js"></script>
@@ -41,7 +42,7 @@
 
 						<div class="template-userInfo">
 							<div class="head-img">
-								<a href="PersonPage.html"><img src="img/default_head.png" height="40px" width="40px" /></a>
+								<a href="#"><img src="img/default_head.png" height="40px" width="40px" /></a>
 							</div>
 						</div>
 					</div>
@@ -73,7 +74,7 @@
 
 				<div class="template-body-left">
 					<!--在这里写左边-->
-					
+
 					<!--左侧状态栏-->
 					<div class="left-status">
 						<ul class="left-statusUl">
@@ -83,63 +84,207 @@
 							<li class="left-status-perInfo">个人信息</li>
 						</ul>
 					</div>
-					
+
 					<!--个人信息-->
-					<div class="left-personInfo">
-						<form action="# " method="post">
-							<div class="left-infoWrap">
-								<h1>个人信息管理</h1>
-								<hr />
-								<table border="0" cellspacing="10" cellpadding="" class="personInfo-table">
-									<tr>
-										<td>登录名</td>
-										<td><span class="loginName">18260070151</span>
-											<a href="#" class="changePassword">修改密码</a>
-										</td>
-									</tr>
-									<tr>
-										<td>邮箱</td>
-										<td><input type="email" name="left-info-email" id="left-info-email" value="786384149@qq.com" /></td>
-									</tr>
-									<tr>
-										<td>性别</td>
-										<td class="sexTd">
-											<input type="radio" name="sex" id="sex-male" value="1" checked/><label for="sex-male">&nbsp;男</label>
-											<span></span>
-											<input type="radio" name="sex" id="sex-female" value="0" /><label for="sex-female">&nbsp;女</label>
-										</td>
-									</tr>
-									<tr>
-										<td>性取向</td>
-										<td class="oritationTd">
-											<input checked type="radio" name="oritation" id="oritation-male" value="1" /><label for="oritation-male">&nbsp;男</label>
-											<span></span>
-											<input type="radio" name="oritation" id="oritation-female" value="0" /><label for="oritation-female">&nbsp;女</label>
-										</td>
-									</tr>
-
-									<tr>
-										<td>
-											个人简介
-										</td>
-										<td>
-											<textarea name="introduce" rows="10" cols="50"></textarea>
-
-										</td>
-									</tr>
-								</table>
-
-								<input type="submit" value="保存" />
-							</div>
-						</form>
-					</div>
 
 					<!--关注的话题-->
 					<div class="left-attentionTopic">
-						<div id="topic-wrap">
-							
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px" />
+							</div>
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>Git Hub</h3></a>
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+							</div>
+							<div class="topic-introduce">
+								开源基地
+							</div>
 						</div>
+						
+						
+						
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/2bd2e49d3f849155376393085edc1d9e_im.jpg" width="60px" height="60px" />
+							</div>
+
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>相信科学</h3></a>
+									
+									
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/2bd2e49d3f849155376393085edc1d9e_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="topic-introduce">
+								科学使你牛逼
+							</div>
+
+						</div>
+						
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/6e292ef66_im.jpg" width="60px" height="60px" />
+							</div>
+
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>大数据</h3></a>
+									
+									
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/6e292ef66_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="topic-introduce">
+								大数据核心力量
+							</div>
+
+						</div>
+						
+						
+						
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px" />
+							</div>
+
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>Git Hub</h3></a>
+									
+									
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="topic-introduce">
+								开源基地
+							</div>
+
+						</div>
+						
+						
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/v2-d8200aeed66c238b2df2f2431b001dcb_im.jpg" width="60px" height="60px" />
+							</div>
+
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>医学奇迹</h3></a>
+									
+									
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/v2-d8200aeed66c238b2df2f2431b001dcb_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="topic-introduce">
+								开源基地
+							</div>
+
+						</div>
+						
+						
+						<div class="topic-wrap">
+							<div class="topic-img">
+								<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px" />
+							</div>
+
+							<div class="topic-title">
+								<a href="topic_blogList.html">
+									<h3>Git Hub</h3></a>
+									
+									
+								<div class="detail-wrap" hidden>
+									<div class="detail-img">
+										<img src="img/topic/283fcdadd_im.jpg" width="60px" height="60px"/>
+									</div>
+
+									<div class="detail-introduce" >
+										<span class="detail-span">gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。</span>
+									</div>
+
+									<div class="detail-buttonwrap">
+										<button class="attentionBtn">关注</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="topic-introduce">
+								开源基地
+							</div>
+
+						</div>
+
 					</div>
+					
+					
+					
 
 					<!--收藏的博文-->
 					<div class="left-attentionBlog">
@@ -209,7 +354,7 @@
 						<div class="friend-nav">
 							<h3>好友</h3>
 						</div>
-						
+
 						<hr />
 						<div class="right-friendwarp">
 							<div class="right-headIMG left">

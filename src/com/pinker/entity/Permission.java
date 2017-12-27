@@ -1,50 +1,51 @@
 package com.pinker.entity;
 
 public class Permission {
-    private Integer roleId;
-    private Integer isadmin;
-    private Integer isvip;
+    private Integer id;
+    private boolean isadmin;
+    private boolean isvip;
 
     public Permission() {
     }
 
     @Override
     public String toString() {
-        return "Permission{" +
-                "roleId=" + roleId +
+        return "PermissionDao{" +
+                "id=" + id +
                 ", isadmin=" + isadmin +
                 ", isvip=" + isvip +
                 '}';
     }
 
-    public Integer getRoleId() {
-        return roleId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Integer getIsadmin() {
+    public boolean isIsadmin() {
         return isadmin;
     }
 
-    public void setIsadmin(Integer isadmin) {
+    public void setIsadmin(boolean isadmin) {
         this.isadmin = isadmin;
     }
 
-    public Integer getIsvip() {
+    public boolean isIsvip() {
         return isvip;
     }
 
-    public void setIsvip(Integer isvip) {
+    public void setIsvip(boolean isvip) {
         this.isvip = isvip;
     }
 
-    public Permission(Integer roleId, Integer isadmin, Integer isvip) {
+    public Permission(Integer id, boolean isadmin, boolean isvip) {
 
-        this.roleId = roleId;
+        this.id = id;
         this.isadmin = isadmin;
         this.isvip = isvip;
     }
+
 }

@@ -4,12 +4,31 @@
 	margin: 0;
 }
 
-a{  text-decoration: none;  color: rgb(150,150,150);  }
-.isActive{  color: rgb(30,30,30);  }
-.template-header a:hover{  color: rgb(30,30,30);  }
-body{  background: rgb(240,240,240);  }
-.right{  float: right;  }
-.left{  float: left;  }
+a{
+	text-decoration: none;
+	color: rgb(150,150,150);
+}
+
+
+.isActive{
+	color: rgb(30,30,30);
+}
+
+.template-header a:hover{
+	color: rgb(30,30,30);
+	
+}
+
+body{
+	background: rgb(240,240,240);
+}
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
 
 /*
  * 网页头部
@@ -37,7 +56,12 @@ font-weight: bold;
 	margin: 0 auto;
 	height: 50px;
 }
-.template-header-wrap div,nav{  display: inline-block;  }
+
+.template-header-wrap div,nav{
+	display: inline-block;
+}
+
+
 .template-logo{
 	display: inline-block;
 	position: relative;
@@ -45,18 +69,29 @@ font-weight: bold;
 
 }
 
-.template-header-nav a{  margin-left: 30px;  }
-.template-search-bar{  margin-left: 30px;  }
+.template-header-nav a{
+	margin-left: 30px;
+	
+}
+
+.template-search-bar{
+	margin-left: 30px;
+}
+
 .template-search-bar input{
 	display: inline-block;
 	height: 34px;
 	width: 280px;
 	padding: 5px 10px;
 }
+
 .template-search-bar input:focus{
 	width: 360px;
 	transition: all 0.3s ease-in-out 0s;
 }
+
+
+
 .template-search-buttonWrap input{
 	display: inline-block;
 	height: 30px;
@@ -67,19 +102,25 @@ font-weight: bold;
 	left: -40px;
 	background: url(../img/icon/searchGray.png)  no-repeat 3px;
 }
+
+
+
 .template-search-buttonWrap input:hover{
 	cursor: pointer;
 	background: url(../img/icon/searchBlue.png)  no-repeat 3px
 }
+
 .template-search-buttonWrap input:focus{
 	outline: none;
 }
+
 .template-header-right{
 	margin-top: 14px;
 	
 }
 .template-loginRegist a{
 	margin-left:20px ;
+	
 }
 
 .head-img{
@@ -90,6 +131,7 @@ font-weight: bold;
 .head-img img{
 	display: none;
 }
+
 .template-main-body{
 	width:1030px ;
 	margin: 15px auto;
