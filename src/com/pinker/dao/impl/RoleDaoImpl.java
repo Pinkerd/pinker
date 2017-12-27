@@ -22,6 +22,6 @@ public class RoleDaoImpl extends BaseDao<Role> implements RoleDao {
     @Override
     public int insertRol(Role role) {
         String sql="insert into role (rolename,permissionId)values(?,?)";
-        return this.update(sql,role.getRolename(),role.getPermissionId());
+        return this.update(sql,role.getRolename());
     }
 }

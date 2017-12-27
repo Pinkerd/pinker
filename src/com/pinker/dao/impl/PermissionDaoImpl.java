@@ -12,13 +12,13 @@ public class PermissionDaoImpl extends BaseDao<Permission> implements Permission
     @Override
     public int insertPerm(Permission permission) {
         String sql="insert into permission (isadmin,isvip)values(?,?)";
-        return this.update(sql,permission.getIsadmin(),permission.getIsvip());
+        return this.update(sql,permission.getIsadmin(),permission.getRoleId());
     }
 
     @Override
     public Permission selectOnePerm(Permission permission) {
         String sql="selecrt * from permission where id=?";
-        return this.getBean(sql,permission.getId());
+        return this.getBean(sql,permission.getRoleId());
     }
 
     @Override
