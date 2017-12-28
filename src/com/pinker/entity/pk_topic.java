@@ -1,26 +1,21 @@
 package com.pinker.entity;
 
-
 import java.util.Date;
 
-/**
- * pk_blog的实体类
- */
-public class Blog {
-    private Integer id;
-    private String title;//标题
+public class pk_topic {
+    private Integer id;//话题标题
+    private  String title;//标题
     private String content;//内容
-    private String titleimg;//标题图
+    private String titleimg;//标题路径
+    private Integer userId;//用户ID
     private Date publishtime;//发布时间
-    private Integer ueserId;//用户id
-    private Integer topicId;//话题id
 
-    public Integer getTopicId() {
-        return topicId;
-    }
+    /**
+     * 存放用户实体
+     */
+    private pk_user user;
 
-    public void setTopicId(Integer topicId) {
-        this.topicId = topicId;
+    public pk_topic() {
     }
 
     public pk_user getUser() {
@@ -31,41 +26,24 @@ public class Blog {
         this.user = user;
     }
 
-    public pk_topic getTopic() {
-        return topic;
-    }
-
-    public void setTopic(pk_topic topic) {
-        this.topic = topic;
-    }
-
-    /**
-     * 存放 用户，话题实体
-     */
-    private pk_user user;
-    private pk_topic topic;
-
-    public Blog() {
-    }
-
-    public Blog(Integer id, String title, String content, String titleimg, Date publishtime, Integer ueserId) {
+    public pk_topic(Integer id, String title, String content, String titleimg, Integer userId, Date publishtime) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.titleimg = titleimg;
+        this.userId = userId;
         this.publishtime = publishtime;
-        this.ueserId = ueserId;
     }
 
     @Override
     public String toString() {
-        return "Blog{" +
+        return "pk_topic{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", titleimg='" + titleimg + '\'' +
+                ", userId=" + userId +
                 ", publishtime=" + publishtime +
-                ", ueserId=" + ueserId +
                 '}';
     }
 
@@ -101,19 +79,19 @@ public class Blog {
         this.titleimg = titleimg;
     }
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     public Date getPublishtime() {
         return publishtime;
     }
 
     public void setPublishtime(Date publishtime) {
         this.publishtime = publishtime;
-    }
-
-    public Integer getUeserId() {
-        return ueserId;
-    }
-
-    public void setUeserId(Integer ueserId) {
-        this.ueserId = ueserId;
     }
 }

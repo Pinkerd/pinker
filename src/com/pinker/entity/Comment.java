@@ -24,6 +24,31 @@ public class Comment {
      */
     private Date publishtime;
 
+    public Blog getBlog() {
+        return blog;
+    }
+
+    public void setBlog(Blog blog) {
+        this.blog = blog;
+    }
+
+    public pk_user getUser() {
+        return user;
+    }
+
+    public void setUser(pk_user user) {
+        this.user = user;
+    }
+
+    /**
+     * 存放博客，用户实体
+
+     */
+    private Blog blog;
+    private pk_user user;
+
+
+
     public Comment() {
     }
 

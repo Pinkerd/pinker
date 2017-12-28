@@ -9,7 +9,9 @@ import java.util.List;
 public class RoleDaoImpl extends BaseDao<Role> implements RoleDao {
     @Override
     public Role selectOne(Role role) {
-        return null;
+        String sql="select * from pk_role where id=?";
+
+        return this.getBean(sql,role.getId());
     }
 
     @Override

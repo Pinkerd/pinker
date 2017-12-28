@@ -1,6 +1,7 @@
 package com.pinker.service;
 
 import com.pinker.entity.Comment;
+import com.pinker.entity.Page;
 
 import java.util.List;
 
@@ -25,4 +26,9 @@ public interface CommentService {
      * 查询多个评论
      */
     List<Comment> getselectAll();
+
+    /**
+     * 分页查询
+     */
+    Page<Comment> findComment(Page<Comment> page);
 }
