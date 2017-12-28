@@ -1,4 +1,4 @@
-package com.pinker.service.serviceImpl;
+package com.pinker.service.serviceimpl;
 
 import com.pinker.dao.daoImpl.UserDaoImpl;
 import com.pinker.entity.pk_user;

@@ -1,6 +1,8 @@
 package com.pinker.service.serviceimpl;
 
 import com.pinker.dao.CommentDao;
+import com.pinker.dao.UserDao;
+import com.pinker.dao.daoImpl.UserDaoImpl;
 import com.pinker.dao.impl.CommentDaoImpl;
 import com.pinker.entity.Comment;
 import com.pinker.service.CommentService;
@@ -9,6 +11,7 @@ import java.util.List;
 
 public class CommentServiceImpl implements CommentService {
     private CommentDao comm=new CommentDaoImpl();
+    private UserDao use=new UserDaoImpl();
     /**
      * 增加的方法
      * @param comment

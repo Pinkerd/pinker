@@ -23,6 +23,9 @@ public class Comment {
      * 发布时间
      */
     private Date publishtime;
+    //用户信息
+    private pk_user user;
+    //博客信息
 
     public Comment() {
     }
