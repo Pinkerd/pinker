@@ -1,8 +1,7 @@
-package com.pinker.service.serviceImpl;
+package com.pinker.service.Impl;
 
 import com.pinker.entity.pk_user;
 import com.pinker.service.UserService;
-import com.pinker.service.serviceimpl.UserServiceImpl;
 import org.junit.Test;
 
 import java.util.Date;
@@ -18,8 +17,8 @@ public class UserServiceImplTest {
 
     @Test
     public void add() throws Exception {
-        pk_user pk_user = new pk_user(4,"user4","444444","user4","user4@qq.com",1L,1L,new Date(),new Date(),"address2","school2","male",new Date(),"aries","cintroduction4","header4");
-        boolean add = us.add(pk_user);
+//        pk_user pk_user = new pk_user(4,"user4","444444","user4","user4@qq.com",1L,1L,new Date(),new Date(),"address2","school2","male",new Date(),"aries","cintroduction4","header4");
+        boolean add = us.add("sss","ssssss",new Date());
         System.out.println(add);
     }
 

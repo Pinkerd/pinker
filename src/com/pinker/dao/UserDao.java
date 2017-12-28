@@ -2,6 +2,7 @@ package com.pinker.dao;
 
 import com.pinker.entity.pk_user;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
 public interface UserDao {
 //用户功能
     /*注册 添加新用户*/
-    public boolean addUser(pk_user pkuser);
+    public boolean addUser(String loginName, String  password, Date createtime);
     /*修改资料 更新信息*/
     public boolean updateUser(pk_user pkuser);
     /*登陆 根据登录名和密码登陆*/

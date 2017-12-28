@@ -260,3 +260,62 @@ tr td:nth-of-type(1){
 	left: 150px;
 	top: 20px;
 }
+
+
+/**
+上传头像框
+ */
+.head-img-box{
+	height:300px;
+	width: 400px;
+	background: rgba(200,200,200,0.8);
+	position: fixed;
+	top:30%;
+	left:40%;
+	box-shadow: 1px 1px 1px gray;
+	border-radius: 3px;
+}
+
+.btn-uploading{
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+	border:0;
+	background: cornflowerblue;
+	color: white;
+}
+
+.btn-uploading:hover{
+	cursor: pointer;
+}
+
+#yushow{
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin: 50px auto 0px;
+	cursor: pointer;
+	color: white;
+	line-height: 150px;
+	text-align: center;
+	background: rgba(100,100,100,0.8);
+}
+
+.close-imgbox{
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	border:0;
+	background: indianred;
+	color: white;
+	margin-left: 10px;
+}
+
+.close-imgbox{
+	cursor: pointer;
+}
+
+.img-upload-buttonwrap{
+	width: 200px;
+	margin: 20px auto 0;
+}
