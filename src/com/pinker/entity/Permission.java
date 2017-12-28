@@ -5,6 +5,7 @@ public class Permission {
     private boolean isadmin;
     private boolean isvip;
 
+
     /**
      * 存放角色实体
      */
@@ -47,7 +48,7 @@ public class Permission {
         this.roleId = id;
     }
 
-    public boolean isIsadmin() {
+    public boolean getIsadmin() {
         return isadmin;
     }
 
@@ -55,7 +56,7 @@ public class Permission {
         this.isadmin = isadmin;
     }
 
-    public boolean isIsvip() {
+    public boolean getIsvip() {
         return isvip;
     }
 

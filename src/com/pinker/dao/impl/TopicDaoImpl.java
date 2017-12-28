@@ -3,9 +3,9 @@ package com.pinker.dao.impl;
 
 import com.pinker.dao.BaseDao;
 import com.pinker.dao.TopicDao;
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_topic;
 
-import java.util.Date;
 import java.util.List;
 
 public class TopicDaoImpl extends BaseDao<pk_topic> implements TopicDao {
@@ -37,5 +37,28 @@ public class TopicDaoImpl extends BaseDao<pk_topic> implements TopicDao {
     public int delete(Integer id) {
         String sql = "delete from pk_topic where id=?";
         return update(sql,id);
+    }
+
+    @Override
+    public Page<pk_topic> findTopic(Page<pk_topic> page) {
+        String totalRecodeSql="select count(*) from pk_topic";
+        //书总数
+        long totalRecodeL= 0;
+
+        totalRecodeL = (long) this.getSingleValue(totalRecodeSql);
+
+        int totalRecode= (int) totalRecodeL;
+        page.setTotalRecord(totalRecode);
+        //页面显示行数
+        int pageSize=page.getPageSize();
+        //偏移索引值
+        int index=page.getIndex();
+
+        String listSql="select * from pk_topic limit ?,?";
+        List<pk_topic> list=this.getListBean(listSql,index,pageSize);
+
+        page.setData(list);
+        return page;
+
     }
 }
