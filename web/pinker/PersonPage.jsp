@@ -6,11 +6,9 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/Template.css" />
 		<link rel="stylesheet" type="text/css" href="css/PersonPage.css" />
-		<script src="/pinker/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="/pinker/js/personpage.js"></script>
-		<script type="text/javascript" src="js/personpage.js"></script>
+		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/layer/layer.min.js"></script>
-		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="js/personpage.js"></script>
 		<title></title>
 
 	</head>
@@ -296,14 +294,17 @@
 
 		</div>
 
-		<div class="head-img-box" >
+		<div class="head-img-box" hidden>
 			<div class="img-box">
-				<img src="" id="yushow"/>
-				<button class="btn-uploading" onclick="uploadBtn();"><i class="icon-uploading"></i>上传图片</button>
-				<a class="shan" onclick="deleteImg();"><img src="/images/www.jpg">删除图片</a>
+				<img src="" id="yushow" alt="点击更换" onclick="uploadBtn()"/>
+				<div class="img-upload-buttonwrap">
+				<button class="btn-uploading" onclick="startUpload()"><i class="icon-uploading"></i>上传图片</button>
+				<button class="close-imgbox" onclick="close()">取消</button>
+				</div>
+				<a class="shan" onclick="deleteImg();"><img src=""></a>
 			</div>
 			<input type="file" name="file" style="display:none;height: 200px;width: 200px;" onchange="previewImg(this);" id="upload" accept="image/*"/>
-			<input type="button" class="startUpLoadBtn" value="开始上传" >
+
 		</div>
 
 

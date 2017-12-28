@@ -21,6 +21,15 @@ public class ImgServlet extends BaseServlet {
      * @throws IOException
      */
     protected void headChange(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String filePath="E:\\site\\images";
+        uploadImg(request,response,filePath);
+
+    }
+
+
+    public void uploadImg(HttpServletRequest request, HttpServletResponse response,String filePath){
+
         try {
             System.out.println("=================《《图片开始上传》》===================");
             response.setContentType("text/html;charset=utf-8");
@@ -54,7 +63,8 @@ public class ImgServlet extends BaseServlet {
 
             imgName = URLDecoder.decode(imgName,"utf-8");//前面进行了两次编码，这里需要用解码器解码一次
             //String path = "/site/images"+File.separator+imgName;//Linux文件保存路径
-            String path = "E:\\site\\images"+ File.separator+imgName;//Windows文件保存路径
+//            String path = "E:\\site\\images"+ File.separator+imgName;
+            String path = filePath+ File.separator+imgName;//Windows文件保存路径
 
             //File file = new File("/site/images");
             File file = new File("E:\\site\\images");
@@ -97,6 +107,5 @@ public class ImgServlet extends BaseServlet {
         }
 
     }
-
 
 }
