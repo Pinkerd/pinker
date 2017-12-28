@@ -6,10 +6,13 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/Template.css" />
 		<link rel="stylesheet" type="text/css" href="css/PersonPage.css" />
-		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/Template.js"></script>
+		<script src="/pinker/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/pinker/js/personpage.js"></script>
 		<script type="text/javascript" src="js/personpage.js"></script>
+		<script type="text/javascript" src="js/layer/layer.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
 		<title></title>
+
 	</head>
 
 	<body>
@@ -292,6 +295,17 @@
 			</div>
 
 		</div>
+
+		<div class="head-img-box" >
+			<div class="img-box">
+				<img src="" id="yushow"/>
+				<button class="btn-uploading" onclick="uploadBtn();"><i class="icon-uploading"></i>上传图片</button>
+				<a class="shan" onclick="deleteImg();"><img src="/images/www.jpg">删除图片</a>
+			</div>
+			<input type="file" name="file" style="display:none;height: 200px;width: 200px;" onchange="previewImg(this);" id="upload" accept="image/*"/>
+			<input type="button" class="startUpLoadBtn" value="开始上传" >
+		</div>
+
 
 	</body>
 

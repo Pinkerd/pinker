@@ -260,3 +260,14 @@ tr td:nth-of-type(1){
 	left: 150px;
 	top: 20px;
 }
+
+
+/**
+上传头像框
+ */
+.head-img-box{
+	height:300px;
+	width: 400px;
+	background: rgba(100,200,80,0.7);
+}
+
