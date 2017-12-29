@@ -1,16 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/Template.css"/>
-		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/Template.js"></script>
+		<link rel="stylesheet" type="text/css" href="pinker/css/Template.css"/>
+		<link rel="stylesheet" type="text/css" href="pinker/css/zhwz.css">
+		<script src="pinker/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="pinker/js/Template.js"></script>
 		<title></title>
 	</head>
-	<style>
-	@import "css/zhwz.css";
-	</style>
 	<body>
 		<!--模板容器-->
 		<div class="template-body">
@@ -42,7 +41,7 @@
 					
 					<div class="template-userInfo">
 						<div class="head-img">
-							<a href="#"><img src="img/default_head.png" height="40px" width="40px"/></a>
+							<a href="#"><img src="pinker/img/default_head.png" height="40px" width="40px"/></a>
 						</div>
 					</div>
 					</div>
@@ -55,7 +54,7 @@
 				<div class="template-body-left">
 					<!--在这里写左边-->
 					<div class="content1">
-					  	<image src="img\icon\cz.png" class="cztp" />
+					  	<image src="pinker/img/icon/cz.png" class="cztp" />
 						<div class = "content">
 							<div class = 'title'>
 								<a href="topic_blogList.jsp"> <span class="title1">残障:我和少数人的生活</span></a> <span class="status" >已结束</span>
@@ -66,7 +65,7 @@
 				          <div class="desciption">中国有 1 亿残障人口，为什么你很少在大街上看到过他们？以残障人士的身份面对生活，是一种怎样的体验？怎样才能正确表达对残障人                            群的支持？ 12 月 3 号世界残障日，我们邀你一起，关注属于这个世界中少数人的生活。</div>
 						  <div class="actions">
 							
-							<a class="button-link-share " href="#"><image src = "img/share.jpg" class="s-jpg" width="25px"/>分享</a>
+							<a class="button-link-share " href="#"><image src = "pinker/img/share.jpg" class="s-jpg" width="25px"/>分享</a>
 							<span class="visits-num">17921665 次浏览 •</span>
 							<span class="count" > 849</span> 人关注
 							<button class="title-attentionBtn">关注</button>
@@ -89,11 +88,11 @@
 							</div>
 							<div class="stylell">
 								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
+									<img src="pinker/img/icon/lr.jpg" class="head-img04">
 									<span class="txt-img04">浏览</span>
 								</a>
 								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
+									<img src="pinker/img/icon/pl.jpg" class="head-img05">
 									<span class="txt-img05">收藏</span>
 								</a>
 							</div>
@@ -104,7 +103,7 @@
 								<a href="topic_blogList.jsp">30岁夫妻双方都患有慢性病，该如何购买保险？</a>
 							</div>
 							<div class="author-info">
-								<a class="author-name" href="javascript:void(0)"><img class="author-img" src="img/headimg/ti66mg.jpg" width="25px" style="border-radius: 3px;"/>李二狗</a> 
+								<a class="author-name" href="javascript:void(0)"><img class="author-img" src="pinker/img/headimg/ti66mg.jpg" width="25px" style="border-radius: 3px;"/>李二狗</a>
 								<span class="author-introduce">黑夜给了我褐色眼睛，我却去翻白眼</span>
 							</div>
 							
@@ -114,11 +113,11 @@
 							
 							<div class="stylell">
 								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
+									<img src="pinker/img/icon/lr.jpg" class="head-img04">
 									<span class="txt-img04">浏览</span>
 								</a>
 								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
+									<img src="pinker/img/icon/pl.jpg" class="head-img05">
 									<span class="txt-img05">收藏</span>
 								</a>
 							</div>
@@ -130,11 +129,11 @@
 							</div>
 							<div class="stylell">
 								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
+									<img src="pinker/img/icon/lr.jpg" class="head-img04">
 									<span class="txt-img04">浏览</span>
 								</a>
 								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
+									<img src="pinker/img/icon/pl.jpg" class="head-img05">
 									<span class="txt-img05">收藏</span>
 								</a>
 							</div>
@@ -146,11 +145,11 @@
 							</div>
 							<div class="stylell">
 								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
+									<img src="pinker/img/icon/lr.jpg" class="head-img04">
 									<span class="txt-img04">浏览</span>
 								</a>
 								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
+									<img src="pinker/img/icon/pl.jpg" class="head-img05">
 									<span class="txt-img05">收藏</span>
 								</a>
 							</div>
@@ -162,31 +161,40 @@
 							</div>
 							<div class="stylell">
 								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
+									<img src="pinker/img/icon/lr.jpg" class="head-img04">
 									<span class="txt-img04">浏览</span>
 								</a>
 								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
+									<img src="pinker/img/icon/pl.jpg" class="head-img05">
 									<span class="txt-img05">收藏</span>
 								</a>
 							</div>
 						</div>
 
-						<div class="main-article01">
-							<div class="main-article01-top" >
-								<a href="topic_blogList.jsp">残疾人面对自己的残疾会有怎样的心态生活？</a>
+						<c:forEach items="${list}" var="list">
+							<div class="main-article01">
+								<div class="main-article01-top" >
+									<a href="topic_blogList.jsp">
+										${list.title}
+									</a>
+								</div>
+								<div class="article-introduce">
+									<p>
+										${list.content}
+									</p>
+								</div>
+								<div class="stylell">
+									<a href="#">
+										<img src="pinker/img/icon/lr.jpg" class="head-img04">
+										<span class="txt-img04">浏览</span>
+									</a>
+									<a href="#">
+										<img src="pinker/img/icon/pl.jpg" class="head-img05">
+										<span class="txt-img05">收藏</span>
+									</a>
+								</div>
 							</div>
-							<div class="stylell">
-								<a href="#">
-									<img src="img/icon/lr.jpg" class="head-img04">
-									<span class="txt-img04">浏览</span>
-								</a>
-								<a href="#">
-									<img src="img/icon/pl.jpg" class="head-img05">
-									<span class="txt-img05">收藏</span>
-								</a>
-							</div>
-						</div>
+						</c:forEach>
 
 					</div>
 				</div>

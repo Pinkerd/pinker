@@ -1,4 +1,6 @@
-
+/**
+ * 上传图片
+ */
 
 function uploadBtn(){
     $("#upload").click();
@@ -25,6 +27,7 @@ function previewImg(imgFile){
     }
 }
 
+var uploadName,uploadDateImg;
 //开始上传
 function uploadImg(imgFile){
     //获取图片文件
@@ -38,7 +41,9 @@ function uploadImg(imgFile){
         var reader = new FileReader();
         reader.onload = function(){//异步方法,文件读取成功完成时触发
             var dataImg = reader.result;//文件一旦开始读取，无论成功或失败，实例的 result 属性都会被填充。如果读取失败，则 result 的值为 null ，否则即是读取的结果
-            syncUpload(name,dataImg);
+            // syncUpload(name,dataImg);
+            uploadName=name;
+            uploadDateImg=dataImg;
         };
         reader.readAsDataURL(file);//将文件读取为 DataURL
     }else {
@@ -84,3 +89,27 @@ function deleteImg(){
         }
     });
 }
+
+
+/**
+ * 上传图片结束
+ */
+
+function  startUpload() {
+    syncUpload(uploadName,uploadDateImg);
+}
+
+
+
+$(function () {
+        $(".close-imgbox").click(function () {
+            $(".head-img-box").css("display","none");
+        })
+
+
+
+    $(".Card-headImg").click(function () {
+        $(".head-img-box").css("display","block");
+    })
+    
+})

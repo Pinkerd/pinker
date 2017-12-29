@@ -22,10 +22,25 @@ public class pk_user {
     private  String residence;          //居住地
     private  String school;              //学校
     private  String gender;              //性别
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     private  Date birthday;              //生日
     private  String constellation;      //星座
     private  String introduction;       //个人说明
     private  String header;              //头像
+
+    /**
+     * 存放角色实体
+     */
+    private Role role;
+
 
     /*    构造方法     */
     public pk_user() {
