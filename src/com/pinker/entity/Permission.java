@@ -1,31 +1,54 @@
 package com.pinker.entity;
 
 public class Permission {
-    private Integer id;
+    private Integer roleId;
     private boolean isadmin;
     private boolean isvip;
+
+
+    /**
+     * 存放角色实体
+     */
+    private Role role;
 
     public Permission() {
     }
 
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Override
+
     public String toString() {
         return "PermissionDao{" +
-                "id=" + id +
+                "id=" + roleId +
                 ", isadmin=" + isadmin +
                 ", isvip=" + isvip +
                 '}';
     }
 
     public Integer getId() {
-        return id;
+        return roleId;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.roleId = id;
     }
 
-    public boolean isIsadmin() {
+    public boolean getIsadmin() {
         return isadmin;
     }
 
@@ -33,7 +56,7 @@ public class Permission {
         this.isadmin = isadmin;
     }
 
-    public boolean isIsvip() {
+    public boolean getIsvip() {
         return isvip;
     }
 
@@ -43,7 +66,7 @@ public class Permission {
 
     public Permission(Integer id, boolean isadmin, boolean isvip) {
 
-        this.id = id;
+        this.roleId = id;
         this.isadmin = isadmin;
         this.isvip = isvip;
     }

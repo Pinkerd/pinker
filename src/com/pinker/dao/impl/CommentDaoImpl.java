@@ -3,6 +3,7 @@ package com.pinker.dao.impl;
 import com.pinker.dao.BaseDao;
 import com.pinker.dao.CommentDao;
 import com.pinker.entity.Comment;
+import com.pinker.entity.Page;
 
 import java.util.List;
 
@@ -46,5 +47,29 @@ public class CommentDaoImpl extends BaseDao<Comment> implements CommentDao {
     public List<Comment> getselectAll() {
         String sql="select * from pk_comment";
         return this.getListBean(sql);
+    }
+
+    @Override
+    public Page<Comment> findComment(Page<Comment> page) {
+        String totalRecodeSql="select count(*) from pk_comment";
+        //书总数
+        long totalRecodeL= 0;
+
+        totalRecodeL = (long) this.getSingleValue(totalRecodeSql);
+
+        int totalRecode= (int) totalRecodeL;
+        page.setTotalRecord(totalRecode);
+        //页面显示行数
+        int pageSize=page.getPageSize();
+        //偏移索引值
+        int index=page.getIndex();
+
+        String listSql="select * from pk_comment limit ?,?";
+        List<Comment> list=this.getListBean(listSql,index,pageSize);
+
+        page.setData(list);
+        return page;
+
+
     }
 }

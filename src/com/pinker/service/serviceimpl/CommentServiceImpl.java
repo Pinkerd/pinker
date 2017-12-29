@@ -1,14 +1,23 @@
 package com.pinker.service.serviceimpl;
 
+import com.pinker.dao.BlogDao;
 import com.pinker.dao.CommentDao;
+import com.pinker.dao.UserDao;
+import com.pinker.dao.impl.BlogDaoImpl;
 import com.pinker.dao.impl.CommentDaoImpl;
+import com.pinker.dao.impl.UserDaoImpl;
+import com.pinker.entity.Blog;
 import com.pinker.entity.Comment;
+import com.pinker.entity.Page;
+import com.pinker.entity.pk_user;
 import com.pinker.service.CommentService;
 
 import java.util.List;
 
 public class CommentServiceImpl implements CommentService {
     private CommentDao comm=new CommentDaoImpl();
+    private BlogDao blogDao=new BlogDaoImpl();
+    private UserDao userDao=new UserDaoImpl();
     /**
      * 增加的方法
      * @param comment
@@ -38,8 +47,9 @@ public class CommentServiceImpl implements CommentService {
      */
     @Override
     public Comment getselect(int blogId) {
-        Comment getselect = comm.getselect(blogId);
-        return getselect;
+        Comment comment = comm.getselect(blogId);
+        this.setFull(comment);
+        return comment;
     }
 
     /**
@@ -51,4 +61,34 @@ public class CommentServiceImpl implements CommentService {
         List<Comment> comments = comm.getselectAll();
         return comments;
     }
+
+    /**
+     * 填充博客，用户对象
+     * @param comment
+     */
+    private void setFull(Comment comment){
+        Blog blog=blogDao.getBlogById(comment.getBlogId());
+        pk_user user=userDao.findByUserId(comment.getUserId());
+
+        comment.setBlog(blog);
+        comment.setUser(user);
+    }
+
+
+    /**
+     * 分页显示评论页
+     * @param page
+     * @return
+     */
+    @Override
+    public Page<Comment> findComment(Page<Comment> page) {
+        Page<Comment> commentPage=comm.findComment(page);
+        for(Comment comment:commentPage.getData()){
+            this.setFull(comment);
+
+        }
+        return commentPage;
+    }
+
+
 }
