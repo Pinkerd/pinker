@@ -1,4 +1,10 @@
+<%@ page import="com.pinker.service.BlogDaoService" %>
+<%@ page import="com.pinker.service.Impl.BlogDaoServiceImpl" %>
+<%@ page import="com.pinker.entity.Blog" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +20,12 @@
 	</head>
 
 	<body>
+
+	<%
+		BlogDaoService blog=new BlogDaoServiceImpl();
+		List<Blog> list = blog.getAllBlog();
+		request.setAttribute("list",list);
+	%>
 
 
 		<!--模板容器-->
@@ -92,52 +104,57 @@
 
 					<!--收藏的博文-->
 					<div class="left-attentionBlog">
+
+						<c:forEach items="${list}" var="blog">
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
-								<a href="blog.jsp"><h3>学java除了工作，怎样玩更爽？</h3></a>
+								<a href="/pinker/BlogServlet?method=selectOne&blogId=${blog.id}">${blog.title}</a>
 							</div>
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
 							</div>
 						</div>
-						
-						<div class="blog-wrap">
-							<div class="blog-title-wrap">
-								<a href="blog.jsp"><h3>编程到底难在哪里？</h3></a>
-							</div>
-							<div class="blog-info">
-								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
-							</div>
-						</div>	
-						
-						
-						<div class="blog-wrap">
-							<div class="blog-title-wrap">
-								<a href="blog.jsp"><h3>说说你身边的收纳大师？</h3></a>
-							</div>
-							<div class="blog-info">
-								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
-							</div>
-						</div>	
-						
-						
-						<div class="blog-wrap">
-							<div class="blog-title-wrap">
-								<a href="blog.jsp"><h3>疑因内部宫斗被离职，中兴 70 后程序员从公司坠楼 ​​​​</h3></a>
-							</div>
-							<div class="blog-info">
-								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
-							</div>
-						</div>	
-						
-						<div class="blog-wrap">
-							<div class="blog-title-wrap">
-								<a href="blog.jsp"><h3>如何看待美国谷歌女工程师马楚楚在旧金山湾身亡？</h3></a>
-							</div>
-							<div class="blog-info">
-								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
-							</div>
-						</div>	
+						</c:forEach>
+
+
+						<%--
+                            <div class="blog-wrap">
+                                <div class="blog-title-wrap">
+                                    <a href="blog.jsp"><h3>编程到底难在哪里？</h3></a>
+                                </div>
+                                <div class="blog-info">
+                                    <span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
+                                </div>
+                            </div>
+
+
+                            <div class="blog-wrap">
+                                <div class="blog-title-wrap">
+                                    <a href="blog.jsp"><h3>说说你身边的收纳大师？</h3></a>
+                                </div>
+                                <div class="blog-info">
+                                    <span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
+                                </div>
+                            </div>
+
+
+                            <div class="blog-wrap">
+                                <div class="blog-title-wrap">
+                                    <a href="blog.jsp"><h3>疑因内部宫斗被离职，中兴 70 后程序员从公司坠楼 ​​​​</h3></a>
+                                </div>
+                                <div class="blog-info">
+                                    <span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
+                                </div>
+                            </div>
+
+                            <div class="blog-wrap">
+                                <div class="blog-title-wrap">
+                                    <a href="blog.jsp"><h3>如何看待美国谷歌女工程师马楚楚在旧金山湾身亡？</h3></a>
+                                </div>
+                                <div class="blog-info">
+                                    <span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
+                                </div>
+                            </div>	--%>
 						
 						
 					</div>
