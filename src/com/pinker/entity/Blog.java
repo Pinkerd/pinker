@@ -12,7 +12,7 @@ public class Blog {
     private String content;//内容
     private String titleimg;//标题图
     private Date publishtime;//发布时间
-    private Integer userId;//用户id
+    private Integer ueserId;//用户id
     private Integer topicId;//话题id
 
     public Integer getTopicId() {
@@ -48,13 +48,13 @@ public class Blog {
     public Blog() {
     }
 
-    public Blog(Integer id, String title, String content, String titleimg, Date publishtime, Integer userId) {
+    public Blog(Integer id, String title, String content, String titleimg, Date publishtime, Integer ueserId) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.titleimg = titleimg;
         this.publishtime = publishtime;
-        this.userId = userId;
+        this.ueserId = ueserId;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class Blog {
                 ", content='" + content + '\'' +
                 ", titleimg='" + titleimg + '\'' +
                 ", publishtime=" + publishtime +
-                ", userId=" + userId +
+                ", ueserId=" + ueserId +
                 '}';
     }
 
@@ -109,11 +109,11 @@ public class Blog {
         this.publishtime = publishtime;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUeserId() {
+        return ueserId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUeserId(Integer ueserId) {
+        this.ueserId = ueserId;
     }
 }

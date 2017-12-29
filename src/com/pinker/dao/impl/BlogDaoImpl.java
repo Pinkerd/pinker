@@ -16,7 +16,7 @@ public class BlogDaoImpl extends BaseDao<Blog> implements BlogDao {
     @Override
     public int SaveBlog(Blog blog) {
         String sql="insert into pk_blog(title,content,titleimg,publishtime,userId) values(?,?,?,?,?)";
-        return this.update(sql,blog.getTitle(),blog.getContent(),blog.getTitleimg(),blog.getPublishtime(),blog.getUserId());
+        return this.update(sql,blog.getTitle(),blog.getContent(),blog.getTitleimg(),blog.getPublishtime(),blog.getUeserId());
     }
     /**
      *查询所有数据
@@ -48,7 +48,7 @@ public class BlogDaoImpl extends BaseDao<Blog> implements BlogDao {
     @Override
     public int UpdateBlog(Blog blog,Integer id) {
         String sql="update pk_blog set title=?,content=?,titleimg=?,publishtime=?,userId=? where id=?";
-        return this.update(sql,blog.getTitle(),blog.getContent(),blog.getTitleimg(),blog.getPublishtime(),blog.getUserId(),id);
+        return this.update(sql,blog.getTitle(),blog.getContent(),blog.getTitleimg(),blog.getPublishtime(),blog.getUeserId(),id);
     }
 
     @Override
