@@ -59,6 +59,9 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<Comment> getselectAll() {
         List<Comment> comments = comm.getselectAll();
+        for (Comment com: comments) {
+            this.setFull(com);
+        }
         return comments;
     }
 

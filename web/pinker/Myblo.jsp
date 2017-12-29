@@ -14,6 +14,8 @@
 	</head>
 
 	<body>
+
+
 		<!--模板容器-->
 		<div class="template-body">
 			<!--头部容器-->
@@ -97,7 +99,7 @@
 							<div class="blog-info">
 								<span>2017-12-05</span>·<span>16 个回答</span>·<span>55 个关注</span>
 							</div>
-						</div>	
+						</div>
 						
 						<div class="blog-wrap">
 							<div class="blog-title-wrap">
@@ -224,7 +226,7 @@
 									<h4>David Lee</h4></a>
 								<span class="introduce">我爱你你却爱她，先森 </span>
 							</div>
-							<div id="friend-manager">
+							<div class="friend-manager">
 
 							</div>
 						</div>
@@ -238,7 +240,7 @@
 									<h4>我的小贱贱</h4></a>
 								<span class="introduce">我知道你爱她命里少我一个也没差</span>
 							</div>
-							<div id="friend-manager">
+							<div class="friend-manager">
 
 							</div>
 						</div>
@@ -252,7 +254,7 @@
 									<h4>建民质疑</h4></a>
 								<span class="introduce">良人未归途我念故人归</span>
 							</div>
-							<div id="friend-manager">
+							<div class="friend-manager">
 
 							</div>
 						</div>
