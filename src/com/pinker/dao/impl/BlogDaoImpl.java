@@ -69,21 +69,5 @@ public class BlogDaoImpl extends BaseDao<Blog> implements BlogDao {
         return page;
     }
 
-    @Override
-    public Page<Blog> findBlog(Page<Blog> page) {
-        String totalRecodeSql="select count(*) from pk_blog";
-        //书总数
-        long totalRecodeL= (long) this.getSingleValue(totalRecodeSql);
-        int totalRecode= (int) totalRecodeL;
-        page.setTotalRecord(totalRecode);
-        //页面显示行数
-        int pageSize=page.getPageSize();
-        //偏移索引值
-        int index=page.getIndex();
 
-        String listSql="select * from book limit ?,?";
-        List<Blog> list=this.getListBean(listSql,index,pageSize);
-        page.setData(list);
-        return page;
-    }
 }
