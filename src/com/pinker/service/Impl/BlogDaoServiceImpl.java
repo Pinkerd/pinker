@@ -55,12 +55,10 @@ public class BlogDaoServiceImpl implements BlogDaoService {
      */
     private void setFull(Blog blog){
         int topicId=blog.getTopicId();
-        int userId=blog.getUeserId();
+        int userId=blog.getUserId();
         blog.setTopic(topicDao.selectOne(topicId));//填充话题属性
         blog.setUser(userDao.findByUserId(userId));//填充用户属性
-
     }
-
 
     /**
      * 删除博客（测试用，正式项目禁用）
@@ -94,7 +92,6 @@ public class BlogDaoServiceImpl implements BlogDaoService {
         Page<Blog> blogPage=blogDao.findBlog(page);
 
         for(Blog blog:blogPage.getData()){
-
             this.setFull(blog);
         }
         return  blogPage;
