@@ -11,6 +11,8 @@ import static org.junit.Assert.*;
  */
 
 public class JDBCUtilsTest {
+
+
     @Test
     public void getConnection() throws Exception {
         Connection connection = JDBCUtils.getConnection();

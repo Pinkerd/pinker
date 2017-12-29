@@ -1,5 +1,6 @@
 package com.pinker.servlet;
 
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 import com.pinker.service.Impl.UserServiceImpl;
 
@@ -14,13 +15,25 @@ import java.util.List;
 
 /**
  * Created by Aries.Gu on 2017/12/26.
+ * user管理servlet
+ * function：
+ * 1.根据登录名和密码登陆    done
+ * 2.注册 添加新用户         done
+ * 3.修改资料 更新信息       done
+ * 4.好友推荐 寻找相同学校的人
+ * 5.好友推荐 寻找相同居住地的人
+ * 6.根据id查询用户          done
+ * 7.根据姓名查询用户        done
+ * 8.白名单                  done
+ * 9.黑名单                  done
+ * 10.冻结/解冻方法          done
  */
 
 @WebServlet(name = "UsersServlet",urlPatterns = ("/UsersServlet"))
 public class UsersServlet extends BaseServlet {
     UserServiceImpl usi=new UserServiceImpl();
 
-    /*登陆 根据登录名和密码登陆*/
+    /*1.登陆 根据登录名和密码登陆*/
     protected void logIn(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("jump into logIn...");
 
@@ -29,7 +42,7 @@ public class UsersServlet extends BaseServlet {
         pk_user login = usi.login(username, password);
         System.out.println(login);
     }
-    /*注册 添加新用户*/
+    /*2.注册 添加新用户*/
     protected void saveUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("jump into saveUser...");
 
@@ -41,67 +54,100 @@ public class UsersServlet extends BaseServlet {
         System.out.println("add:  "+add);
 
     }
-    /*修改资料 更新信息*/
+    /*3.修改资料 更新信息*/
     protected void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
-    /*好友推荐 寻找相同学校的人*/
+    /*4.好友推荐 寻找相同学校的人*/
     protected void school(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        System.out.println("jump into same school...");
     }
-    /*好友推荐 寻找相同居住地的人*/
+    /*5.好友推荐 寻找相同居住地的人*/
     protected void residence(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        System.out.println("jump into same residence...");
     }
-    /*根据id查询用户*/
+    /*6.根据id查询用户*/
     protected void findId(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("jump into findId...");
 
         String num = request.getParameter("byId");
         Integer byId = Integer.valueOf(num);
-        System.out.println("获取到的id值"+byId);
+
         pk_user byUserId = usi.findByUserId(byId);
         ArrayList<pk_user> list=new ArrayList<pk_user>();
         list.add(byUserId);
-        System.out.println("根据id查询的结果"+list);
 
         request.setAttribute("userlist",list);
         request.getRequestDispatcher("pinker/pages/userResult.jsp").forward(request,response);
     }
-    /*根据姓名查询用户*/
+
+    /*7.根据姓名查询用户*/
     protected void findName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("jump into findName...");
 
         String byName = request.getParameter("byName");
-        System.out.println("获取到的name值"+byName);
+
         List<pk_user> list = usi.findByUserName(byName);
-        System.out.println("根据name查询的结果"+list);
 
         request.setAttribute("userlist",list);
         request.getRequestDispatcher("pinker/pages/userResult.jsp").forward(request,response);
     }
-    /*显示列表 查询所有用户*/
-    protected void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("jump into findAll...");
 
-        List<pk_user> all = usi.all();
-        System.out.println(all);
-        request.setAttribute("userlist",all);
-        request.getRequestDispatcher("pinker/pages/userManager.jsp").forward(request,response);
+    /*8.白名单*/
+    //分页信息的方法
+    protected void findUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //获取页面传入的当前页
+        String pageNumber = req.getParameter("pageNumber");
+
+        //设置每页显示的条数
+        int pageSize=10;
+        //调用finduser方法
+        Page<pk_user> page = usi.findUser(pageNumber, pageSize,1);
+        //将查询到的信息放进域中
+        req.setAttribute("page",page);
+
+        //转发到bookmanagger页面
+        req.getRequestDispatcher("pinker/pages/userManager.jsp").forward(req,resp);
     }
-    /*根据id删除用户*/
-    protected void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("jump into deleteUser...");
+    /*9.黑名单*/
+    //分页信息的方法
+    protected void blackList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //获取页面传入的当前页
+        String pageNumber = req.getParameter("pageNumber");
 
+        //设置每页显示的条数
+        int pageSize=10;
+        //调用finduser方法
+        Page<pk_user> page = usi.findUser(pageNumber, pageSize,0);
+        //将查询到的信息放进域中
+        req.setAttribute("page",page);
+
+        //转发到bookmanagger页面
+        req.getRequestDispatcher("pinker/pages/userUnfreeze.jsp").forward(req,resp);
+    }
+    /*10.冻结、解冻的方法*/
+    protected void freezeUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("jump into freezeUser...");
+        //获取id
         String num = request.getParameter("id");
         Integer id = Integer.valueOf(num);
         System.out.println(id);
-        boolean delete = usi.delete(id);
+        //获取状态参数
+        String num2 = request.getParameter("status");
+        Integer freeze = Integer.valueOf(num2);
+        //执行冻结、解冻操作
+        boolean delete = usi.freeze(freeze,id);
 
-        List<pk_user> all = usi.all();
-        request.setAttribute("userlist",all);
-        request.getRequestDispatcher("pinker/pages/userManager.jsp").forward(request,response);
-
+        if(freeze==1){
+            //如果从黑名单 解冻  跳转去黑名单
+            response.sendRedirect(request.getContextPath()+"/UsersServlet?method=blackList");
+        }else{
+            //如果从白名单 冻结  跳转去白名单
+            response.sendRedirect(request.getContextPath()+"/UsersServlet?method=findUser");
+        }
     }
+
+
+
 }

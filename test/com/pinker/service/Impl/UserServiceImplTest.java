@@ -1,5 +1,6 @@
 package com.pinker.service.Impl;
 
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 import com.pinker.service.UserService;
 import org.junit.Test;
@@ -12,8 +13,19 @@ import java.util.List;
  */
 
 public class UserServiceImplTest {
-
     UserService us=new UserServiceImpl();
+    @Test
+    public void findUser() throws Exception {
+        Page<pk_user> page = us.findUser("1",10,0); //第一页  每页三个
+        List<pk_user> date = page.getDate();
+        for(pk_user user:date){
+            System.out.println(user);
+        }
+
+
+    }
+
+
 
     @Test
     public void add() throws Exception {
@@ -61,16 +73,18 @@ public class UserServiceImplTest {
         System.out.println(user2);
     }
 
+/*
     @Test
     public void all() throws Exception {
         List<pk_user> all = us.all();
         System.out.println(all);
     }
+*/
 
-    @Test
+/*    @Test
     public void delete() throws Exception {
         boolean delete = us.delete(4);
         System.out.println(delete);
-    }
+    }*/
 
 }

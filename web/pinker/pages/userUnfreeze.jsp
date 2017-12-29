@@ -10,10 +10,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>用户管理界面</title>
+    <title>黑名单列表</title>
     <style>
         .search{
-          display: inline-block;float: left;margin-bottom: 30px;
+            display: inline-block;float: left;margin-bottom: 30px;
         }
         .box{
             width: 1000px;
@@ -29,36 +29,36 @@
     </style>
 </head>
 <body>
-<h1 align="center">用户列表</h1>
+<h1 align="center">黑名单列表</h1>
 <div class="box">
-<form action="http://localhost:8080/pinker/UsersServlet?method=findId" method="post" id="idFrom">
-    <table  align="center" class="search">
-        <tr>
-            <td>
-                <input  type="text"  name="byId" size="40" style="width:200px;height:20px;"
-                placeholder="输入用户ID"/>
-            </td>
-            <td>
-                <input type="submit" value="搜索" id="idButton">
-            </td>
-        </tr>
+    <form action="http://localhost:8080/pinker/UsersServlet?method=findId" method="post" id="idFrom">
+        <table  align="center" class="search">
+            <tr>
+                <td>
+                    <input  type="text"  name="byId" size="40" style="width:200px;height:20px;"
+                            placeholder="输入用户ID"/>
+                </td>
+                <td>
+                    <input type="submit" value="搜索" id="idButton">
+                </td>
+            </tr>
 
-    </table>
-</form>
-<form action="http://localhost:8080/pinker/UsersServlet?method=findName" method="post">
-    <table align="center" class="search" style="margin-left:300px;float: right">
-        <tr>
-            <td>
-                <input  type="text"  name="byName" size="40" style="width:200px;height:20px;"
-                        placeholder="输入用户名"/>
-            </td>
-            <td>
-                <input type="submit" value="搜索" id="nameButton">
-            </td>
-        </tr>
+        </table>
+    </form>
+    <form action="http://localhost:8080/pinker/UsersServlet?method=findName" method="post">
+        <table align="center" class="search" style="margin-left:300px;float: right">
+            <tr>
+                <td>
+                    <input  type="text"  name="byName" size="40" style="width:200px;height:20px;"
+                            placeholder="输入用户名"/>
+                </td>
+                <td>
+                    <input type="submit" value="搜索" id="nameButton">
+                </td>
+            </tr>
 
-    </table>
-</form>
+        </table>
+    </form>
 </div>
 <table border="1"  width="60%" align="center" style="text-align: center">
 
@@ -85,14 +85,15 @@
             <td>${user.lastlogin}</td>
             <td>${user.gender}</td>
             <td>
-            <a href="#" onclick="window.confirm('确定冻结用户?  ID：${user.id}/用户名：${user.username}')?   /*0*/
-                    this.href='http://localhost:8080/pinker/UsersServlet?method=freezeUser&id=${user.id}&status=${user.status}'
-                    :this.href='javascript:void()';">冻结</a>
+                <a href="#" onclick="window.confirm('确定解冻用户?  ID：${user.id}/用户名：${user.username}')?  /*1*/
+                        this.href='http://localhost:8080/pinker/UsersServlet?method=freezeUser&id=${user.id}&status=${user.status}'
+                        :this.href='javascript:void()';">解冻</a>
             </td>
         </tr>
     </c:forEach>
 
 </table>
+
 <%--分页--%>
 <br>
 

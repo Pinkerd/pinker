@@ -14,18 +14,20 @@ import java.util.List;
 public class UserDaoImplTest {
 
     UserDao ud=new UserDaoImpl();
+/*
     @Test
     public void deleteUserById() throws Exception {
         boolean b = ud.deleteUserById(4);
         System.out.println(b);
     }
+*/
 
 
-    @Test
+/*    @Test
     public void findAll() throws Exception {
         List<pk_user> all = ud.findAll();
         System.out.println(all);
-    }
+    }*/
 
 
     @Test

@@ -1,5 +1,6 @@
 package com.pinker.dao;
 
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 
 import java.util.Date;
@@ -29,8 +30,10 @@ public interface UserDao {
 
 //管理员功能
     /*显示列表 查询所有用户*/
-    public List<pk_user> findAll();
+    public List<pk_user> findAll(int status);
     /*根据id删除用户*/
-    public boolean deleteUserById(Integer id);
+    public boolean freezeUserById(Integer status,Integer id);
+    /* 查询页码的方法 */
+    Page<pk_user> findUser(Page<pk_user> page,Integer status);
 
 }

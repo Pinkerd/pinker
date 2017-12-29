@@ -53,7 +53,7 @@ public class BaseDao<T> {
     }
 
     //通用的查询一个的方法
-public T getBean(String sql, Object... args) {
+    public T getBean(String sql, Object... args) {
         T t = null;
         //连接数据库
         Connection con = JDBCUtils.getConnection();
@@ -98,8 +98,6 @@ public T getBean(String sql, Object... args) {
         }finally {
             JDBCUtils.close(null,null,conn);
         }
-
-
         return object;
     }
 }

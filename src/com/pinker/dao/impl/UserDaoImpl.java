@@ -2,6 +2,7 @@ package com.pinker.dao.impl;
 
 import com.pinker.dao.BaseDao;
 import com.pinker.dao.UserDao;
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 
 import java.util.Date;
@@ -69,16 +70,43 @@ public class UserDaoImpl extends BaseDao<pk_user> implements UserDao {
     }
 
     @Override//显示列表 查询所有用户 test pass
-    public List<pk_user> findAll() {
-        String sql="select * from pk_user";
-        List<pk_user> listBean = this.getListBean(sql);
+    public List<pk_user> findAll(int status) {
+        String sql="select * from pk_user where status=?";
+
+        List<pk_user> listBean = this.getListBean(sql,status);
         return listBean;
     }
 
-    @Override//根据id删除用户 test pass
-    public boolean deleteUserById(Integer id) {
-        String sql="delete from pk_user where id=?";
-        int update = this.update(sql, id);
+    @Override//根据id冻结、解冻用户 test pass
+    public boolean freezeUserById(Integer status,Integer id) {
+        String sql="update pk_user set status=? where id=?";
+        if(status==1){
+            status=0;
+        }else{
+            status=1;
+        }
+
+        int update = this.update(sql, status,id);
         return update!=0;
     }
+
+    /* 查询user类分页信息的方法
+    *  pageNumber pagesize已设置 index
+    * totalpage totalrecord date未设置
+    * */
+    @Override
+    public Page<pk_user> findUser(Page<pk_user> page,Integer status) {
+
+        /*设置totalrecord*/
+        String sql="select count(*) from pk_user where status = ?";  //查询到所有的记录数
+        long totalrecord = (long) this.getSingleValue(sql,status);//获得查询结果
+        page.setTotalRecord((int) totalrecord);     //设置所有记录数
+
+        /*设置date*/
+        sql="select * from pk_user where status=? limit ?,?";
+        List<pk_user> listBean = this.getListBean(sql,status, page.getIndex(), page.getPageSize());
+        page.setDate(listBean);
+        return page;
+    }
+
 }
