@@ -2,13 +2,11 @@ package com.pinker.dao.impl;
 
 import com.pinker.dao.UserDao;
 import com.pinker.entity.Page;
-import com.pinker.entity.pk_user;
+import com.pinker.entity.User;
 import org.junit.Test;
 
 import java.util.Date;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Aries.Gu on 2017/12/26.
@@ -21,14 +19,14 @@ public class UserDaoImplTest {
     UserDao ud=new UserDaoImpl();
     @Test
     public void findUser() throws Exception {
-        Page<pk_user> page = new Page<pk_user>();
+        Page<User> page = new Page<User>();
         page.setPageNumber(1);
         page.setPageSize(10);
 
-        Page<pk_user> user = ud.findUser(page,1);
-        List<pk_user> date = page.getDate();
+        Page<User> user = ud.findUser(page,1);
+        List<User> date = page.getDate();
 
-        for(pk_user user1:date){
+        for(User user1:date){
             System.out.println(user1);
         }
     }

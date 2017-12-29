@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 带泛型的实体类
  * 谁做增删改查谁继承BaseDao
- * 写法举例:public class pk_user extends BaseDao<pk_user>
+ * 写法举例:public class User extends BaseDao<User>
  *
  * @param <T>
  */
@@ -28,7 +28,7 @@ public class BaseDao<T> {
     private Class<T> type;
 
     public BaseDao(){
-        //UserDao extends BaseDao<pk_user>
+        //UserDao extends BaseDao<User>
         //获取当前类的带泛型的父类
         ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();
         //获取泛型的具体的类，返回值为一个数组

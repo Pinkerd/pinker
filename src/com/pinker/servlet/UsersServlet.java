@@ -1,7 +1,7 @@
 package com.pinker.servlet;
 
 import com.pinker.entity.Page;
-import com.pinker.entity.pk_user;
+import com.pinker.entity.User;
 import com.pinker.service.Impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
@@ -39,7 +39,7 @@ public class UsersServlet extends BaseServlet {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        pk_user login = usi.login(username, password);
+        User login = usi.login(username, password);
         System.out.println(login);
     }
     /*2.注册 添加新用户*/
@@ -74,21 +74,21 @@ public class UsersServlet extends BaseServlet {
         String num = request.getParameter("byId");
         Integer byId = Integer.valueOf(num);
 
-        pk_user byUserId = usi.findByUserId(byId);
-        ArrayList<pk_user> list=new ArrayList<pk_user>();
+        User byUserId = usi.findByUserId(byId);
+        ArrayList<User> list=new ArrayList<User>();
         list.add(byUserId);
 
         request.setAttribute("userlist",list);
         request.getRequestDispatcher("pinker/pages/userResult.jsp").forward(request,response);
     }
-
+    
     /*7.根据姓名查询用户*/
     protected void findName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("jump into findName...");
 
         String byName = request.getParameter("byName");
 
-        List<pk_user> list = usi.findByUserName(byName);
+        List<User> list = usi.findByUserName(byName);
 
         request.setAttribute("userlist",list);
         request.getRequestDispatcher("pinker/pages/userResult.jsp").forward(request,response);
@@ -103,7 +103,7 @@ public class UsersServlet extends BaseServlet {
         //设置每页显示的条数
         int pageSize=10;
         //调用finduser方法
-        Page<pk_user> page = usi.findUser(pageNumber, pageSize,1);
+        Page<User> page = usi.findUser(pageNumber, pageSize,1);
         //将查询到的信息放进域中
         req.setAttribute("page",page);
 
@@ -119,7 +119,7 @@ public class UsersServlet extends BaseServlet {
         //设置每页显示的条数
         int pageSize=10;
         //调用finduser方法
-        Page<pk_user> page = usi.findUser(pageNumber, pageSize,0);
+        Page<User> page = usi.findUser(pageNumber, pageSize,0);
         //将查询到的信息放进域中
         req.setAttribute("page",page);
 
