@@ -2,8 +2,8 @@ package com.pinker.service.serviceimpl;
 
 import com.pinker.dao.CommentDao;
 import com.pinker.dao.UserDao;
-import com.pinker.dao.daoImpl.UserDaoImpl;
 import com.pinker.dao.impl.CommentDaoImpl;
+import com.pinker.dao.impl.UserDaoImpl;
 import com.pinker.entity.Comment;
 import com.pinker.service.CommentService;
 
