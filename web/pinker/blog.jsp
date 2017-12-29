@@ -1,16 +1,37 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/Template.css" />
+		<link rel="stylesheet" type="text/css" href="pinker/css/Template.css" />
 
-		<link rel="stylesheet" type="text/css" href="css/Blog.css" />
-		<link rel="stylesheet" type="text/css" href="css/left.css" />
-		<link rel="stylesheet" type="text/css" href="css/right.css" />
-		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/Template.js"></script>
+		<link rel="stylesheet" type="text/css" href="pinker/css/Blog.css" />
+		<script src="pinker/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="pinker/js/Template.js"></script>
+		<script type="text/javascript">
+
+            /**
+             *  评论框的显示和隐藏
+             */
+            $(document).ready(function() {
+                $(".left-comment").click(function() {
+                    $(".Comments-container").toggle();
+                });
+
+            });
+
+            /**
+             *  关注问题和取消关注
+             */
+            $(function(){
+                $(".page-attention").toggle(
+
+                    function() {$(".page-attention").html("关注问题");},
+                    function() {$(".page-attention").html("取消关注");}
+                )
+            })
+		</script>
 		<title></title>
 	</head>
 
@@ -78,12 +99,7 @@
 										</div>
 									</div>
 								</div>
-								<h1 class="page_topcontenttitle">社交网络对真实生活中的人际关系会有什么影响？</h1>
-								<div class="page_topcontentdetail">
-									<span class="RichText">最近贾樟柯导演拍了新短片，
-									讲 3 个年轻人因为陌陌找到同类化解孤独。目前社交网络越来越发达，
-									这种突破地域和空间的限制，强调人与人之间的连接，是否会对人…</span>
-								</div>
+								${key.title}
 							</div>
 
 							<div class="page_topcontentside">
@@ -107,23 +123,19 @@
 							<div class="page_topfootAction">
 								<div class="page_topfootActioncomment">
 									<button class="button3">
-							<img class="button3-img" src="img/评论.png" width="20px " height="20px"/>
+							<img class="button3-img" src="pinker/img/评论.png" width="20px " height="20px"/>
 								5条评论
 							</button>
 								</div>
 								<div class="page_topfootActionshareMenu">
 									<button class="button4">
-								<img src="img/分享.png" width="20px" height="20px"/>
+								<img src="pinker/img/分享.png" width="20px" height="20px"/>
 								转发
 								</button>
 								</div>
 							</div>
 						</div>
-
 					</div>
-					
-
-
 						</div>
 					</div>
 					
@@ -140,7 +152,7 @@
 						<div class="contentITem-meta">
 							<div class="author-info">
 								<div class="Popover">
-									<img src="img/rBACE1QVCzTBwmNzAAC99vs-BW0180_200x200_3.png" width="37px" height="37px" />
+									<img src="pinker/img/rBACE1QVCzTBwmNzAAC99vs-BW0180_200x200_3.png" width="37px" height="37px" />
 								</div>
 								<div class="AuthorInfo-content">
 									<div class="AuthorInfo-head">
@@ -155,11 +167,10 @@
 							<div class="AnswerItem-extraInfo">
 								收录于 编辑推荐 &nbsp;圆桌 299 人赞同了该回答
 							</div>
-
 						</div>
 						<div class="RichContent-inner">
 							<span class="RichText">
-									<p>1996年，Sherry Turkle第一次在TED演讲时，她的题目是“庆祝我们在互联网上的生活”，但如今，她却认为网络正在“带我们去到我们不愿意去的地方”。尽管互联网时代给人们提供的社交途径越来越多，<b>人与人的关系却好像越来越疏远，我们更不愿意与人亲密，更少会邀请人来家里做客。</b></p>
+									<%--<p>1996年，Sherry Turkle第一次在TED演讲时，她的题目是“庆祝我们在互联网上的生活”，但如今，她却认为网络正在“带我们去到我们不愿意去的地方”。尽管互联网时代给人们提供的社交途径越来越多，<b>人与人的关系却好像越来越疏远，我们更不愿意与人亲密，更少会邀请人来家里做客。</b></p>
 									<p>她认为，社交媒体使我们产生了三个<b>幻想</b>：</p>
 									<p><b>1. 我们在任何情况下都会收获关注。</b></p>
 									<p><b>2. 我们总是能够被听到。</b></p>
@@ -218,34 +229,37 @@
 									<p><i>从前的锁也好看 </i></p>
 									<p><i>钥匙精美有样子 </i></p>
 									<p><i>你锁了 人家就懂了</i></p>
-									<p><i>（木心：从前慢）</i></p>
+									<p><i>（木心：从前慢）</i></p>--%>
+								${key.content}
 							</span>
 						</div>
 						<div class="ContentItem-time">
-							<a href="#">编辑于 2017-02-28</a>
+							<a href="#">
+								${key.publishtime}
+							</a>
 						</div>
 
 						<div class="ContentItem-actions">
 							<span>
 								<button  class="left-Thumb">
-									<img src="img/点赞.png" width="16px" height="16px"/>
+									<img src="pinker/img/点赞.png" width="16px" height="16px"/>
 								</button>
 								<button class="left-noThumb">
-									<img src="img/取消赞.png" width="16px" height="16px "/>
+									<img src="pinker/img/取消赞.png" width="16px" height="16px "/>
 								</button>
 							</span>
 							<button class="left-comment">
-							<img class="button3-img" src="img/评论.png" width="20px " height="20px"/>
+							<img class="button3-img" src="pinker/img/评论.png" width="20px " height="20px"/>
 								22条评论
 							</button>
 
 							<button class="left-dividual">
-								<img src="img/分享.png" width="20px" height="20px"/>
+								<img src="pinker/img/分享.png" width="20px" height="20px"/>
 								分享
 								</button>
 
 							<button class="left-collect">
-								<img src="img/收藏.png" width="20px" height="20px"/>
+								<img src="pinker/img/收藏.png" width="20px" height="20px"/>
 								收藏
 								</button>
 						</div>
@@ -268,7 +282,7 @@
 										<div>
 											<div class="CommentItem-meta">
 												<div class="Popover">
-													<img src="img/de6b65d85e1d9434!400x400_big.jpg" width="23px" height="23px" alt="熊本熊" /> 熊本熊
+													<img src="pinker/img/de6b65d85e1d9434!400x400_big.jpg" width="23px" height="23px" alt="熊本熊" /> 熊本熊
 												</div>
 											</div>
 
@@ -278,11 +292,11 @@
 
 											<div class="CommentItem-footer">
 												<button class="CommentItem-Thumb">
-								             	<img src="img/点赞.png" width="16px" height="16px"/>赞
+								             	<img src="pinker/img/点赞.png" width="16px" height="16px"/>赞
 								               </button>
 
 												<button class="CommentItem-revert">
-								             	<img src="img/回复.png" width="16px" height="16px"/>回复
+								             	<img src="pinker/img/回复.png" width="16px" height="16px"/>回复
 								               </button>
 
 											</div>
@@ -338,16 +352,10 @@
 								<a href="blog.jsp" target="_blank">朋友圈里常发什么样的图片的人比较讨厌</a>
 								3021个回答
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
 			</div>
-
 		</div>
-
 	</body>
-
 </html>

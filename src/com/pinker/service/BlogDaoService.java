@@ -2,6 +2,7 @@ package com.pinker.service;
 
 
 import com.pinker.entity.Blog;
+import com.pinker.entity.Page;
 
 import java.util.List;
 
@@ -26,4 +27,10 @@ public interface BlogDaoService {
      * 更新一条数据(修改)
      */
     int UpdateBlog(Blog blog, Integer id);
+
+    /**
+     * 分页查询
+     */
+    Page<Blog> findBlog(Page<Blog> page);
+
 }
