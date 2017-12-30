@@ -5,7 +5,6 @@ import com.pinker.dao.BaseDao;
 import com.pinker.dao.BlogDao;
 import com.pinker.entity.Blog;
 import com.pinker.entity.Page;
-import org.eclipse.jdt.internal.compiler.ast.ForeachStatement;
 
 import java.util.List;
 
@@ -46,7 +45,7 @@ public class BlogDaoImpl extends BaseDao<Blog> implements BlogDao {
      * 更新一条数据(修改)
      */
     @Override
-    public int UpdateBlog(Blog blog,Integer id) {
+    public int UpdateBlog(Blog blog, Integer id) {
         String sql="update pk_blog set title=?,content=?,titleimg=?,publishtime=? where id=?";
         return this.update(sql,blog.getTitle(),blog.getContent(),blog.getTitleimg(),blog.getPublishtime(),id);
     }

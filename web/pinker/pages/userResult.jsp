@@ -1,5 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.pinker.entity.pk_user" %><%--
+<%@ page import="com.pinker.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2017/12/28
@@ -15,7 +15,7 @@
 <body>
 <h1 align="center">查询结果</h1>
 
-        <table border="1" align="center" style="text-align: center">
+<table border="1"  width="60%" align="center" style="text-align: center">
 
             <tr>
                 <td>用户ID</td>
@@ -57,8 +57,8 @@
                     <td>${user.header}</td>
                     <td>
                         <a href="#" onclick="window.confirm('确定删除用户?  ID：${user.id}/用户名：${user.username}')?
-                                this.href='http://localhost:8080/pinker/UsersServlet?method=deleteUser&id=${user.id}'
-                                :this.href='javascript:void()';">删除</a>
+                                this.href='http://localhost:8080/pinker/UsersServlet?method=freezeUser&id=${user.id}&status=${user.status}'
+                                :this.href='javascript:void()';">还原/冻结</a>
                     </td>
                 </tr>
             </c:forEach>

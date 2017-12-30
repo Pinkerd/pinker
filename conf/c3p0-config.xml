@@ -3,6 +3,6 @@
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <property name="jdbcUrl">jdbc:mysql://localhost:3306/pinker</property>
         <property name="user">root</property>
-        <property name="password">15120227</property>
+        <property name="password">gpf6899667</property>
     </named-config>
 </c3p0-config>

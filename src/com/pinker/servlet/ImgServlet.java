@@ -27,7 +27,7 @@ public class ImgServlet extends BaseServlet {
     }
 
 
-    public void uploadImg(HttpServletRequest request, HttpServletResponse response,String filePath){
+    public void uploadImg(HttpServletRequest request, HttpServletResponse response, String filePath){
 
         try {
             System.out.println("=================《《图片开始上传》》===================");
