@@ -5,11 +5,9 @@ import com.pinker.dao.FriendDao;
 import com.pinker.entity.Friend;
 import com.pinker.entity.Page;
 
-import java.awt.print.Book;
 import java.util.List;
 
-public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
-
+public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao {
 
     /**
      * 按用户id，好友id查询一个
@@ -38,22 +36,22 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
      * @return
      */
     @Override
-    public List<Friend> selectFriendsByUserId(Friend friend,Integer statue) {
+    public List<Friend> selectFriendsByUserId(Friend friend) {
 
-        String sql="select * from pk_friend where userId=? and statue=?";
+        String sql="select * from pk_friend where userId=?";
 
-        return this.getListBean(sql,friend.getUserId(),statue);
+        return this.getListBean(sql,friend.getUserId());
     }
 
     /**
-     * 插入好友
+     * 插入用户
      * @param friend
      * @return
      */
     @Override
-    public int insertFri(Friend friend,Integer statue) {
-        String sql="insert into pk_friend values(?,?,?,?)";
-        return this.update(sql,friend.getUserId(),friend.getFriendId(),friend.getRemark(),0);
+    public int insertFri(Friend friend) {
+        String sql="insert into pk_friend values(?,?,?)";
+        return this.update(sql,friend.getUserId(),friend.getFriendId(),friend.getRemark());
     }
 
 
@@ -62,7 +60,7 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
      */
     @Override
     public Page<Friend> findFriendByUserId(Friend friend, Page<Friend> page){
-        String totalRecodeSql="select count(*) from pk_friend where userId=? and statue=1";
+        String totalRecodeSql="select count(*) from pk_friend where userId=?";
         //书总数
         long totalRecodeL= 0;
 
@@ -81,11 +79,5 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
         page.setData(list);
         return page;
 
-    }
-
-    @Override
-    public int updateFri(Friend friend,Integer statue) {
-        String sql="update pk_friend set statue=? where userId=? and friendId=?";
-        return this.update(sql,statue,friend.getUserId(),friend.getFriendId());
     }
 }

@@ -54,25 +54,13 @@ public class FiendServiceImpl implements FriendService {
 
 
     /**
-     * 接受邀请后
-     * 新建好友关系，将状态设置为1，并且互为好友
+     * 新建好友关系
      */
     @Override
     public boolean beFriend(Friend friend) {
-        friendDao.updateFri(friend,1);
+        friendDao.insertFri(friend);
         this.swapFriend(friend);
-        friendDao.insertFri(friend,1);
+        friendDao.insertFri(friend);
         return false;
-    }
-
-    /**
-     * 发起好友邀请
-     * @param friend
-     * @return
-     */
-    @Override
-    public boolean friendRequest(Friend friend) {
-
-        return friendDao.insertFri(friend,0)!=0;
     }
 }
