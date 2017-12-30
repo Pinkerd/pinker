@@ -4,12 +4,23 @@ public class Friend {
     private Integer userId;//用户id
     private Integer friendId;//好友id
     private String remark;//备注
+    private Integer statue;//0为好友邀请，1为好友关系
 
     /**
      * 存放用户，好友实体
+
      */
     private pk_user user;
+
     private pk_user friend;
+
+    public Integer getStatue() {
+        return statue;
+    }
+
+    public void setStatue(Integer statue) {
+        this.statue = statue;
+    }
 
     public pk_user getUser() {
         return user;
@@ -33,6 +44,7 @@ public class Friend {
                 "userId=" + userId +
                 ", friendId=" + friendId +
                 ", remark='" + remark + '\'' +
+                ", statue=" + statue+'\''+
                 '}';
     }
 
@@ -64,10 +76,11 @@ public class Friend {
 
     }
 
-    public Friend(Integer userId, Integer friendId, String remark) {
+    public Friend(Integer userId, Integer friendId, String remark, Integer statue) {
 
         this.userId = userId;
         this.friendId = friendId;
         this.remark = remark;
+        this.statue=statue;
     }
 }

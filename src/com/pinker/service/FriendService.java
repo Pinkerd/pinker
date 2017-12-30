@@ -10,11 +10,17 @@ public interface FriendService {
      * @param friend
      * @return
      */
-    Page<Friend> findFriendByUserId(Page<Friend> page,Friend friend);
+    Page<Friend> findFriendByUserId(Page<Friend> page, Friend friend);
 
 
     /**
      * 新建好友关系
      */
     boolean beFriend(Friend friend);
+
+    /**
+     * 发送好友请求
+     */
+    boolean friendRequest(Friend friend);
+
 }

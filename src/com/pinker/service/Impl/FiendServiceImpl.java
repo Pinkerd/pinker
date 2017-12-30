@@ -58,9 +58,20 @@ public class FiendServiceImpl implements FriendService {
      */
     @Override
     public boolean beFriend(Friend friend) {
-        friendDao.insertFri(friend);
+        friendDao.updateFri(friend,1);
         this.swapFriend(friend);
-        friendDao.insertFri(friend);
+        friendDao.insertFri(friend,1);
         return false;
     }
+
+    /**
+     * 发送好友请求
+     * @param friend
+     * @return
+     */
+    @Override
+    public boolean friendRequest(Friend friend) {
+        return friendDao.insertFri(friend,1)!=0;
+    }
+
 }
