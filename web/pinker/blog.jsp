@@ -11,6 +11,30 @@
 		<link rel="stylesheet" type="text/css" href="css/right.css" />
 		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/Template.js"></script>
+		<script type="text/javascript">
+
+            /**
+             *  评论框的显示和隐藏
+             */
+            $(document).ready(function() {
+                $(".left-comment").click(function() {
+                    $(".Comments-container").toggle();
+                });
+
+            });
+
+            /**
+			 *  关注问题和取消关注
+             */
+            $(function(){
+                $(".page-attention").toggle(
+
+                    function() {$(".page-attention").html("关注问题");},
+                    function() {$(".page-attention").html("取消关注");}
+                )
+            })
+		</script>
+
 		<title></title>
 	</head>
 

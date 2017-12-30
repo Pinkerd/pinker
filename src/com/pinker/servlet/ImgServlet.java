@@ -5,7 +5,6 @@ import sun.misc.BASE64Decoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -28,7 +27,7 @@ public class ImgServlet extends BaseServlet {
     }
 
 
-    public void uploadImg(HttpServletRequest request, HttpServletResponse response,String filePath){
+    public void uploadImg(HttpServletRequest request, HttpServletResponse response, String filePath){
 
         try {
             System.out.println("=================《《图片开始上传》》===================");

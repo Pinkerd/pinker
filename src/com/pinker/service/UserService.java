@@ -12,11 +12,11 @@ import java.util.List;
 public interface UserService {
     //用户功能
     /*注册 添加新用户*/
-    public boolean add(String loginName, String  password, Date createtime);
+    public boolean add(String loginName, String password, Date createtime);
     /*修改资料 更新信息*/
     public boolean update(pk_user pkuser);
     /*登陆 根据登录名和密码登陆*/
-    public pk_user login(String loginName,String password);
+    public pk_user login(String loginName, String password);
     /*好友推荐 寻找相同学校的人*/
     public List<pk_user> findUsersBySchool(pk_user pkuser);
     /*好友推荐 寻找相同居住地的人*/

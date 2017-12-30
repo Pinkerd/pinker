@@ -17,4 +17,10 @@ public interface FriendService {
      * 新建好友关系
      */
     boolean beFriend(Friend friend);
+
+    /**
+     * 发起好友申请
+     */
+    boolean friendRequest(Friend friend);
+
 }

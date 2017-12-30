@@ -10,6 +10,7 @@ import java.util.List;
 
 public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
 
+
     /**
      * 按用户id，好友id查询一个
      * @param friend
@@ -37,22 +38,22 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
      * @return
      */
     @Override
-    public List<Friend> selectFriendsByUserId(Friend friend) {
+    public List<Friend> selectFriendsByUserId(Friend friend,Integer statue) {
 
-        String sql="select * from pk_friend where userId=?";
+        String sql="select * from pk_friend where userId=? and statue=?";
 
-        return this.getListBean(sql,friend.getUserId());
+        return this.getListBean(sql,friend.getUserId(),statue);
     }
 
     /**
-     * 插入用户
+     * 插入好友
      * @param friend
      * @return
      */
     @Override
-    public int insertFri(Friend friend) {
-        String sql="insert into pk_friend values(?,?,?)";
-        return this.update(sql,friend.getUserId(),friend.getFriendId(),friend.getRemark());
+    public int insertFri(Friend friend,Integer statue) {
+        String sql="insert into pk_friend values(?,?,?,?)";
+        return this.update(sql,friend.getUserId(),friend.getFriendId(),friend.getRemark(),0);
     }
 
 
@@ -61,7 +62,7 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
      */
     @Override
     public Page<Friend> findFriendByUserId(Friend friend, Page<Friend> page){
-        String totalRecodeSql="select count(*) from pk_friend where userId=?";
+        String totalRecodeSql="select count(*) from pk_friend where userId=? and statue=1";
         //书总数
         long totalRecodeL= 0;
 
@@ -80,5 +81,11 @@ public class FirendDaoImpl extends BaseDao<Friend> implements FriendDao{
         page.setData(list);
         return page;
 
+    }
+
+    @Override
+    public int updateFri(Friend friend,Integer statue) {
+        String sql="update pk_friend set statue=? where userId=? and friendId=?";
+        return this.update(sql,statue,friend.getUserId(),friend.getFriendId());
     }
 }
