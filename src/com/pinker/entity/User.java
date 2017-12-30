@@ -9,7 +9,7 @@ import java.util.Date;
  *       创建时间，居住地，学校，性别，生日，星座，头像，个人说明）
  */
 
-public class pk_user {
+public class User {
     private  Integer id;                  //id
     private  String loginName;          //登陆账号
     private  String password;           //密码
@@ -22,31 +22,16 @@ public class pk_user {
     private  String residence;          //居住地
     private  String school;              //学校
     private  String gender;              //性别
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
     private  Date birthday;              //生日
     private  String constellation;      //星座
     private  String introduction;       //个人说明
     private  String header;              //头像
 
-    /**
-     * 存放角色实体
-     */
-    private Role role;
-
-
     /*    构造方法     */
-    public pk_user() {
+    public User() {
     }
 
-    public pk_user(Integer id, String loginName, String password, String username, String email, Long roleId, Long status, Date createtime, Date lastlogin, String residence, String school, String gender, Date birthday, String constellation, String introduction, String header) {
+    public User(Integer id, String loginName, String password, String username, String email, Long roleId, Long status, Date createtime, Date lastlogin, String residence, String school, String gender, Date birthday, String constellation, String introduction, String header) {
         this.id = id;
         this.loginName = loginName;
         this.password = password;
@@ -68,7 +53,7 @@ public class pk_user {
     /*    toString方法 */
     @Override
     public String toString() {
-        return "pk_user{" +
+        return "User{" +
                 "id=" + id +
                 ", loginName='" + loginName + '\'' +
                 ", password='" + password + '\'' +

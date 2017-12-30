@@ -1,6 +1,3 @@
-import com.pinker.dao.CommentDao;
-import com.pinker.dao.impl.CommentDaoImpl;
-import com.pinker.entity.Comment;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
