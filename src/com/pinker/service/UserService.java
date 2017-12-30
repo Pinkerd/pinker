@@ -1,5 +1,6 @@
 package com.pinker.service;
 
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 
 import java.util.Date;
@@ -29,7 +30,10 @@ public interface UserService {
 
     //管理员功能
     /*显示列表 查询所有用户*/
-    public List<pk_user> all();
+    public List<pk_user> all(int status);
     /*根据id删除用户*/
-    public boolean delete(Integer id);
+    public boolean freeze(Integer status, Integer id);
+
+    /*查询user类分页信息的方法*/
+    Page<pk_user> findUser(String pageNumber, int pageSize, Integer status);
 }

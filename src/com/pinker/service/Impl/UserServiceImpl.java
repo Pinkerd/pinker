@@ -1,6 +1,7 @@
 package com.pinker.service.Impl;
 
 import com.pinker.dao.impl.UserDaoImpl;
+import com.pinker.entity.Page;
 import com.pinker.entity.pk_user;
 import com.pinker.service.UserService;
 
@@ -58,14 +59,32 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override//显示列表 查询所有用户  test  pass
-    public List<pk_user> all() {
-        List<pk_user> all = userDao.findAll();
+    public List<pk_user> all(int status) {
+        List<pk_user> all = userDao.findAll(status);
         return all;
     }
 
     @Override//根据id删除用户  test  pass
-    public boolean delete(Integer id) {
-        boolean b = userDao.deleteUserById(id);
+    public boolean freeze(Integer status,Integer id) {
+        boolean b = userDao.freezeUserById(status,id);
         return b;
+    }
+
+    @Override//分页的方法
+    public Page<pk_user> findUser(String pageNumber, int pageSize,Integer status) {
+        /*pageNumber传进来转换成int 如果用户输入错误  默认1*/
+        int pn=1;   //默认在第一页
+        try {
+            //将传入的String类型转换成int
+            //如果输入abc则会报错
+            pn = Integer.parseInt(pageNumber);
+        } catch (Exception e) {
+        }
+
+        Page<pk_user> page=new  Page<pk_user>();
+        page.setPageNumber(pn);         //设置当前页
+        page.setPageSize(pageSize);    //设置每页几个
+
+        return userDao.findUser(page,status);
     }
 }

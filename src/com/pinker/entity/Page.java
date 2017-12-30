@@ -2,69 +2,40 @@ package com.pinker.entity;
 
 import java.util.List;
 
+/**
+ * Created by Aries.Gu on 2017/12/29
+ */
 public class Page<T> {
-    private List<T> data;//显示数据集合
-    private int pageNum;//当前页码
-    private int totalPage;//总页数
-    private int totalRecord;//总记录数
-    private int pageSize;//每页显示条数
-    private int index;//开始索引
+    private int pageNumber;   //  当前页码，需要用户指定，在Servlet中获取
+    private int pageSize;   //每页显示的条数，自己或用户指定，在Servlet中设置
+    private int totalRecord;   //总记录数，需要从数据库中查询
+    private int totalPage;   //总页数，通过计算获取
+    private int index ;   // 开始索引，通过getindex获取
+    private List<T> data   ;   // 保存要显示的图书的信息
 
-    @Override
-    public String toString() {
-        return "Page{" +
-                "data=" + data +
-                ", pageNum=" + pageNum +
-                ", totalPage=" + totalPage +
-                ", totalRecord=" + totalRecord +
-                ", pageSize=" + pageSize +
-                ", index=" + index +
-                '}';
+    public int getIndex() {
+        index=(getPageNumber()-1)*getPageSize();
+        return index;
     }
 
-    public List<T> getData() {
-        return data;
-    }
-
-    public void setData(List<T> data) {
-        this.data = data;
-    }
-
-    /**
-     * 页码，当页码小于0是设为1
-     * 当页码大于总页数时设置为总页数
-     * @return
-     */
-    public int getPageNum() {
-        if(pageNum<0){
-            pageNum= 1;
-    }
-        if(pageNum>this.getTotalPage()){
-            pageNum= getTotalPage();
-        }
-        return pageNum;
-    }
-
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
-    }
-
-    /**
-     * 总页数为总记录数除每页记录数ceil
-     * @return
-     */
     public int getTotalPage() {
-        return this.totalRecord%this.pageSize==0?this.totalRecord/this.pageSize:this.totalRecord/this.pageSize+1;
+        if(getTotalRecord() % getPageSize() ==0 ){
+            totalPage=getTotalRecord() / getPageSize();
+        }else{
+            totalPage=getTotalRecord() / getPageSize() + 1;
+        }
+        return totalPage;
     }
 
-
-
-    public int getTotalRecord() {
-        return this.totalRecord;
+    public int getPageNumber() {
+        if(this.pageNumber<1){
+            pageNumber=1;
+        }
+        return pageNumber;
     }
 
-    public void setTotalRecord(int totalRecord) {
-        this.totalRecord = totalRecord;
+    public void setPageNumber(int pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     public int getPageSize() {
@@ -75,22 +46,19 @@ public class Page<T> {
         this.pageSize = pageSize;
     }
 
-    public int getIndex() {
-        return (this.pageNum-1)*this.pageSize;
+    public int getTotalRecord() {
+        return totalRecord;
     }
 
-
-    public Page() {
-
-    }
-
-    public Page(List<T> data, int pageNum, int totalPage, int totalRecord, int pageSize, int index) {
-
-        this.data = data;
-        this.pageNum = pageNum;
-        this.totalPage = totalPage;
+    public void setTotalRecord(int totalRecord) {
         this.totalRecord = totalRecord;
-        this.pageSize = pageSize;
-        this.index = index;
+    }
+
+    public List<T> getData() {
+        return data;
+    }
+
+    public void setData(List<T> data) {
+        this.data = data;
     }
 }
